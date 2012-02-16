@@ -10,6 +10,8 @@ Send email only on Reply to My Comment: will give users the option to receive em
 == Description ==
 Send email only on Reply to My Comment: is a simple plugin that will give your site visitors the option to receive email notification if someone replies to their comment. But the email will only be sent to one person, that is, the original commenter to whom the new user is replying.
 
+You can find more information here: http://www.a1newspapers.com/blog/2012/02/16/send-email-only-op/
+
 ## Requirements
 * Wordpress 2.9.2 or higher
 * PHP 5.1 or higher
