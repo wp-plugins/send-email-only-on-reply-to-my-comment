@@ -8,7 +8,7 @@ global $wpdb;
 
 ob_start();
 // Load localization files
-load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/one-email-only/langs', '/one-email-only/langs');
+load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on-reply-to-my-comment/langs', '/send-email-only-on-reply-to-my-comment/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
 
 $clean_post_id = !empty($_POST['srp'])?intval($_POST['srp']):(!empty($_GET['srp'])?intval($_GET['srp']):0);

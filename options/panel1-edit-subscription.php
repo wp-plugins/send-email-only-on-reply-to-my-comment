@@ -6,7 +6,7 @@ if (!function_exists('is_admin') || !is_admin()){
 ?>
 <div class="postbox">
 <h3><?php _e('Update Subscription','subscribe-reloaded') ?></h3>
-<form action="options-general.php?page=one-email-only/options/index.php&subscribepanel=1" method="post" id="update_address_form"
+<form action="options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&subscribepanel=1" method="post" id="update_address_form"
 	onsubmit="if (this.sre.value == '') return false; return confirm('<?php _e('Please remember: this operation cannot be undone. Are you sure you want to proceed?', 'subscribe-reloaded') ?>')">
 <fieldset style="border:0">
 <p><?php _e('Post:','subscribe-reloaded'); echo ' <strong>'.get_the_title(intval($_GET['srp'])); ?></strong></p>

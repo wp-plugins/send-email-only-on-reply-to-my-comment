@@ -4,12 +4,11 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
   header('Location: /');
   exit;
 }
-
 global $wpdb;
 ob_start();
 
 // Load localization files
-load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/one-email-only/langs', '/one-email-only/langs');
+load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on-reply-to-my-comment/langs', '/send-email-only-on-reply-to-my-comment/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
 if (!empty($current_user->user_email))
 	$clean_email = $current_user->user_email;

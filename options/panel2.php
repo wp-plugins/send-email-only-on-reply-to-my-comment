@@ -56,16 +56,16 @@ $details_subscribe_reloaded = $wpdb->get_results("SHOW TABLE STATUS LIKE '$wp_su
 		<p class="nodata"><?php _e('No data to display','subscribe-reloaded') ?></p>
 	<?php } else { ?>
 	<object classid="clsid:D27CDB6E-AE6D-11cf-96B8-444553540000" codebase=https://download.macromedia.com/pub/shockwave/cabs/flash/swflash.cab#version=6,0,0,0" width="775" height="175">
-        <param name="movie" value="<?php echo $subscribe_plugin_url ?>/one-email-only/options/swf/fcf.swf" />
+        <param name="movie" value="<?php echo $subscribe_plugin_url ?>/send-email-only-on-reply-to-my-comment/options/swf/fcf.swf" />
         <param name="FlashVars" value="&dataXML=<?php echo $subscribe_xml ?>&chartWidth=765&chartHeight=170">
         <param name="quality" value="high" />
-        <embed src="<?php echo $subscribe_plugin_url ?>/one-email-only/options/swf/fcf.swf" flashVars="&dataXML=<?php echo $subscribe_xml ?>&chartWidth=775&chartHeight=175" quality="high" width="765" height="170" name="line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
+        <embed src="<?php echo $subscribe_plugin_url ?>/send-email-only-on-reply-to-my-comment/options/swf/fcf.swf" flashVars="&dataXML=<?php echo $subscribe_xml ?>&chartWidth=775&chartHeight=175" quality="high" width="765" height="170" name="line" type="application/x-shockwave-flash" pluginspage="http://www.macromedia.com/go/getflashplayer" />
 	</object>
 	<?php } ?>
 </div>
 
 <div class="postbox small">
-	<span class="note"><?php if (!empty($details_subscribe_reloaded[0]['Data_free'])) echo '[<a href="options-general.php?page=one-email-only/options/index.php&subscribepanel=6&ot=yes">'.__('optimize','subscribe-reloaded').'</a>]'; ?></span>
+	<span class="note"><?php if (!empty($details_subscribe_reloaded[0]['Data_free'])) echo '[<a href="options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&subscribepanel=6&ot=yes">'.__('optimize','subscribe-reloaded').'</a>]'; ?></span>
 	<h3><?php _e( 'Database', 'subscribe-reloaded' ) ?></h3>
 	<?php 
 	if (empty($subscribe_xml)){ ?>

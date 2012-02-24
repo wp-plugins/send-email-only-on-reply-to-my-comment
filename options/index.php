@@ -37,7 +37,7 @@ function subscribe_reloaded_get_option($_option = '', $_default = ''){
 }
 
 // Load localization files
-load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/one-email-only/langs', '/one-email-only/langs');
+load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on-reply-to-my-comment/langs', '/send-email-only-on-reply-to-my-comment/langs');
 
 // Define the panels
 $array_panels = array(
@@ -60,12 +60,12 @@ if ($wp_locale->text_direction != 'ltr') $array_panels = array_reverse($array_pa
 		foreach($array_panels as $a_panel_id => $a_panel_details){
 			echo '<a class="nav-tab nav-tab';
 			echo ($current_panel == $a_panel_id+1)?'-active':'-inactive';
-			echo '" href="options-general.php?page=one-email-only/options/index.php&subscribepanel='.($a_panel_id+1).'">'.$a_panel_details.'</a>';
+			echo '" href="options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&subscribepanel='.($a_panel_id+1).'">'.$a_panel_details.'</a>';
 		}
 		?>
 	</h2>
 	
 	
-	<?php if (is_readable(WP_PLUGIN_DIR."/one-email-only/options/panel$current_panel.php")) require_once(WP_PLUGIN_DIR."/one-email-only/options/panel$current_panel.php"); ?>
+	<?php if (is_readable(WP_PLUGIN_DIR."/send-email-only-on-reply-to-my-comment/options/panel$current_panel.php")) require_once(WP_PLUGIN_DIR."/send-email-only-on-reply-to-my-comment/options/panel$current_panel.php"); ?>
 
 </div>

@@ -36,7 +36,7 @@ if (isset($_POST['options'])){
 }
 
 ?>
-<form action="admin.php?page=one-email-only/options/index.php&subscribepanel=<?php echo $current_panel ?>" method="post">
+<form action="admin.php?page=send-email-only-on-reply-to-my-comment/options/index.php&subscribepanel=<?php echo $current_panel ?>" method="post">
 <table class="form-table <?php echo $wp_locale->text_direction ?>">
 <tbody>
 	<tr>

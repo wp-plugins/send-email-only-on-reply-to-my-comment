@@ -3,7 +3,7 @@ Contributors: Yasir
 Tags: email, notification, original commenter
 Requires at least: 2.9.2
 Tested up to: 3.2
-Stable tag: 0.3
+Stable tag: 0.4
 
 Send email only on Reply to My Comment: will give users the option to receive email alert only when someone replies to their comment.
 
@@ -38,3 +38,6 @@ No: You can only use one of these two plugins at the same time.
 
 = 0.3 =
 * Fixed: A bug reported by a user
+
+= 0.4 =
+* Fixed: Another bug reported by "Weiching"

@@ -8,7 +8,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
 ob_start();
 
 // Load localization files
-load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/one-email-only/langs', '/one-email-only/langs');
+load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on-reply-to-my-comment/langs', '/send-email-only-on-reply-to-my-comment/langs');
 
 // Is the post_id passed in the query string valid?
 $post_ID = !empty($_GET['srp'])?intval($_GET['srp']):0;

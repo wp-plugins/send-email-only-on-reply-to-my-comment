@@ -7,7 +7,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
 
 // Load localization files
 global $wpdb;
-load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/one-email-only/langs', '/one-email-only/langs');
+load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on-reply-to-my-comment/langs', '/send-email-only-on-reply-to-my-comment/langs');
 $wp_subscribe_reloaded = new wp_subscribe_reloaded();
 $clean_post_id = intval($_GET['srp']);
 $clean_email = urldecode($wp_subscribe_reloaded->clean_email($_GET['sre']));
