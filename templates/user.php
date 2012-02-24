@@ -4,6 +4,7 @@ if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
   header('Location: /');
   exit;
 }
+
 global $wpdb;
 ob_start();
 

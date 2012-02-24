@@ -1,14 +1,21 @@
 <?php
 // Avoid direct access to this piece of code
-if (!function_exists('add_action')){
-	header('Location: /');
-	exit;
+if (strpos($_SERVER['SCRIPT_FILENAME'], basename(__FILE__))){
+  header('Location: /');
+  exit;
 }
 
-global $wp_subscribe_reloaded;
+// Load localization files
+global $wpdb;
+load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/one-email-only/langs', '/one-email-only/langs');
+$wp_subscribe_reloaded = new wp_subscribe_reloaded();
+$clean_post_id = intval($_GET['srp']);
+$clean_email = urldecode($wp_subscribe_reloaded->clean_email($_GET['sre']));
+$post = get_post($clean_post_id);
 
-$wp_subscribe_reloaded->update_subscription_status($post_ID, $email, '-C');
-$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscription_confirmed')), ENT_COMPAT, 'UTF-8');
-if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage'))
-	$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
+$wpdb->query("UPDATE $wp_subscribe_reloaded->table_subscriptions SET `status` = 'Y' WHERE `email` = '$clean_email' AND `post_ID` = '$clean_post_id'");
+$message = stripslashes(get_option('subscribe_reloaded_subscription_confirmed'));
+if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 return "<p>$message</p>";
+
+?>

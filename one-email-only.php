@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 0.2
+Version: 0.3
 Plugin URI: http://www.a1newspapers.com/blog/2012/02/16/send-email-only-op/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
@@ -31,19 +31,19 @@ function subscribe_reloaded_show(){
 	
 	if($wp_subscribe_reloaded->is_user_subscribed($post->ID, '', 'Y')){
 		$html_to_show = str_replace('[manager_link]', $user_link,
-			stripslashes(get_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this entry. You can <a href='[manager_link]'>Unsubscribe Here</a>.",'subscribe-reloaded'))));
+			stripslashes(get_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this entry. <a href='[manager_link]'>Unsubscribe</a>",'subscribe-reloaded'))));
 		$show_subscription_box = false;
 	}
 	elseif($wp_subscribe_reloaded->is_user_subscribed($post->ID, '', 'C')){
 		$html_to_show = str_replace('[manager_link]', $user_link,
-			stripslashes(get_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this entry needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>.",'subscribe-reloaded'))));
+			stripslashes(get_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this entry needs to be confirmed. <a href='[manager_link]'>Unsubscribe</a>.",'subscribe-reloaded'))));
 		$show_subscription_box = false;
 	}
 	
 	if ($wp_subscribe_reloaded->is_author($post->post_author)){	// when the second parameter is empty, cookie value will be used
 		if (get_option('subscribe_reloaded_admin_subscribe', 'no') == 'no') $show_subscription_box = false;
 		$html_to_show .= str_replace('[manager_link]', $manager_link,
-			stripslashes(get_option('subscribe_reloaded_author_label', __("You can <a href='[manager_link]'>manage the subscriptions</a> of this entry.",'subscribe-reloaded'))));
+			stripslashes(get_option('subscribe_reloaded_author_label', __("<a href='[manager_link]'>Unsubscribe</a>.",'subscribe-reloaded'))));
 	}
 	
 	if ($show_subscription_box){
@@ -194,9 +194,9 @@ class wp_subscribe_reloaded {
 		add_option('subscribe_reloaded_checkbox_class', '', '', 'no');
 		add_option('subscribe_reloaded_checkbox_inline_style', 'width:30px', '', 'no');
 		add_option('subscribe_reloaded_checkbox_html', '<p>[checkbox_field] [checkbox_label]</p>', '', 'no');
-		add_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this entry. <a href='[manager_link]'>Manage</a> your subscriptions.",'subscribe-reloaded'), '', 'no');
-		add_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this entry needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>.",'subscribe-reloaded'), '', 'no');
-		add_option('subscribe_reloaded_author_label', __("You can <a href='[manager_link]'>manage the subscriptions</a> of this entry.",'subscribe-reloaded'), '', 'no');
+		add_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this entry. <a href='[manager_link]'>Unsubscribe</a>",'subscribe-reloaded'), '', 'no');
+		add_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this entry needs to be confirmed. <a href='[manager_link]'>Unsubscribe</a>.",'subscribe-reloaded'), '', 'no');
+		add_option('subscribe_reloaded_author_label', __("<a href='[manager_link]'>Unsubscribe</a>",'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_double_check_subject', __('Please confirm your subscription to [post_title]','subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_double_check_content', __("You have requested to be notified every time a new comment is added to:\n[post_permalink]\n\nPlease confirm your request by clicking on this link:\n[confirm_link]",'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_management_subject', __('Manage your subscriptions on [blog_name]','subscribe-reloaded'));
@@ -320,7 +320,7 @@ class wp_subscribe_reloaded {
 				$this->add_subscription($info->comment_author_email, 'Y', $info->comment_post_ID);
 			}
 		}
-
+$one1="1";
 		// Send a notification to all the users subscribed to this post
 		if (!empty($info) && $info->comment_approved == '1'){
 			$subscribed_emails = $this->_get_subscriptions($info->comment_post_ID, 'Y');
@@ -333,11 +333,11 @@ class wp_subscribe_reloaded {
 		$child2 = mysql_fetch_row($parent1); 
 		$child2 = $child2[0];
 			
-			if($child1!= '0'){
+			if($child1!= '0' && $one1=='1' ){
 		$a_email= $child2;
 				// Skip the user who posted this new comment
 				if ($a_email != $info->comment_author_email && $this->is_user_subscribed($info->comment_post_ID, $child2)) $this->_notify_user($a_email, $info->comment_post_ID, $_comment_ID);
-			}}
+	$one1="0";		}}
 		
 
 		// Notify administrator, if the case
@@ -375,7 +375,7 @@ class wp_subscribe_reloaded {
 				}
 				else{
 					$wpdb->query("UPDATE $this->table_subscriptions set `status` = 'Y' WHERE `email` = '$info->comment_author_email' AND `post_ID` = '$info->comment_post_ID'");
-					$subscribed_emails = $this->_get_subscriptions($info->comment_post_ID, 'Y');
+					$subscribed_emails = $this->_get_subscriptions($info->comment_post_ID, 'Y');$one1="1";
 					foreach($subscribed_emails as $a_email){
 							$parent = mysql_query("SELECT `comment_parent` FROM $wpdb->comments WHERE `comment_ID` = '$_comment_ID'");
 		$child1 = mysql_fetch_row($parent); 
@@ -385,11 +385,11 @@ class wp_subscribe_reloaded {
 		$child2 = mysql_fetch_row($parent1); 
 		$child2 = $child2[0];
 			
-			if($child1!= '0'){
+			if($child1!= '0' && $one1=='1'){
 		$a_email= $child2;
 				// Skip the user who posted this new comment
 				if ($a_email != $info->comment_author_email && $this->is_user_subscribed($info->comment_post_ID, $child2, 'Y')) $this->_notify_user($a_email, $info->comment_post_ID, $_comment_ID);
-			}}
+		$one1="0";	}}
 				}
 				break;
 

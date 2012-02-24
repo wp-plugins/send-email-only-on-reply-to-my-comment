@@ -3,9 +3,9 @@ Contributors: Yasir
 Tags: email, notification, original commenter
 Requires at least: 2.9.2
 Tested up to: 3.2
-Stable tag: 0.2
+Stable tag: 0.3
 
-Send email only on Reply to My Comment: will give users the option to receive email aleart only when someone replies to their comment.
+Send email only on Reply to My Comment: will give users the option to receive email alert only when someone replies to their comment.
 
 == Description ==
 Send email only on Reply to My Comment: is a simple plugin that will give your site visitors the option to receive email notification if someone replies to their comment. But the email will only be sent to one person, that is, the original commenter to whom the new user is replying.
@@ -28,3 +28,13 @@ You can find more information here: http://www.a1newspapers.com/blog/2012/02/16/
 2. Activate it
 3. Under Settings, you can click on "One Email"
 4. You can see Stats and can change few options.
+
+== Frequently Asked Questions ==
+
+= Can I use this plugin along with this plugin "subscribe-to-comments-reloaded"? =
+No: You can only use one of these two plugins at the same time.
+
+== Changelog ==
+
+= 0.3 =
+* Fixed: A bug reported by a user
