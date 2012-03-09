@@ -2,8 +2,8 @@
 Contributors: Yasir
 Tags: email, notification, original commenter
 Requires at least: 2.9.2
-Tested up to: 3.2
-Stable tag: 0.5
+Tested up to: 3.3.1
+Stable tag: 0.6
 
 Send email only on Reply to My Comment: will give users the option to receive email alert only when someone replies to their comment.
 

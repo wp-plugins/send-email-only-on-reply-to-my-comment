@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 0.5
+Version: 0.6
 Plugin URI: http://www.a1newspapers.com/blog/2012/02/16/send-email-only-op/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
