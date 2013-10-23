@@ -2,99 +2,96 @@ msgid ""
 msgstr ""
 "Project-Id-Version: Subscribe to Comments Reloaded\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2011-07-25 16:02-0500\n"
-"PO-Revision-Date: 2011-07-25 16:02-0500\n"
-"Last-Translator: due chiacchiere <info@duechiacchiere.it>\n"
-"Language-Team: \n"
+"POT-Creation-Date: 2011-09-22 15:04+0100\n"
+"PO-Revision-Date: 2011-09-22 15:05+0100\n"
+"Last-Translator: Terese Mörtvik <terese.mortvik@gmail.com>\n"
+"Language-Team: Terese Mörtvik <terese.mortvik@tiarin.se>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+"X-Poedit-Language: Swedish\n"
+"X-Poedit-Country: SWEDEN\n"
 "X-Poedit-KeywordsList: __;_e\n"
 "X-Poedit-Basepath: ../\n"
-"Plural-Forms: er\n"
-"X-Poedit-Language: Dutch\n"
-"X-Poedit-Country: NETHERLANDS\n"
+"Plural-Forms: er, nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 
 #: subscribe-to-comments-reloaded.php:41
-#: subscribe-to-comments-reloaded.php:248
-#, fuzzy
+#: subscribe-to-comments-reloaded.php:230
 msgid "Your subscription to this post needs to be confirmed. <a href='[manager_link]'>Manage your subscriptions</a>."
-msgstr "Je abonnement op dit bericht moet eerst worden bevestigd. <a href='[manager_link]'>Beheer je abonnementen</a>."
+msgstr "Din prenumeration på inlägget måste bekräftas. <a href='[manager_link]'>Redigera dina prenumerationer</a>."
 
 #: subscribe-to-comments-reloaded.php:46
-#: subscribe-to-comments-reloaded.php:247
-#, fuzzy
+#: subscribe-to-comments-reloaded.php:229
 msgid "You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions."
-msgstr "Je hebt een abonnement op dit bericht. Beheer je abonnementen <a href='[manager_link]'>op deze pagina</a>. "
+msgstr "Du prenumererar på detta inlägg. <a href='[manager_link]'>Redigera</a> dina prenumerationer."
 
 #: subscribe-to-comments-reloaded.php:53
-#: subscribe-to-comments-reloaded.php:249
-#, fuzzy
+#: subscribe-to-comments-reloaded.php:231
 msgid "You can <a href='[manager_link]'>manage the subscriptions</a> of this post."
-msgstr "Op <a href='[manager_link]'>deze pagina</a> kun je de abonnementen van dit bericht beheren."
+msgstr "Du kan <a href='[manager_link]'>redigera </a> din prenumeration på detta inlägg."
 
 #: subscribe-to-comments-reloaded.php:58
-#: subscribe-to-comments-reloaded.php:244
+#: subscribe-to-comments-reloaded.php:228
 msgid "Notify me of followup comments via e-mail. You can also <a href='[subscribe_link]'>subscribe</a> without commenting."
-msgstr "Houd mij op de hoogte van nieuwe reacties. Of <a href='[subscribe_link]'>abonneer jezelf</a> op deze discussie zonder te reageren."
+msgstr "Vill du veta när din kommentar har fått ett svar, eller prenumerera på inläggets kommentarer via e-post? Du kan även <a href='[subscribe_link]'>prenumerera</a> utan att lämna en kommentar."
 
 #: subscribe-to-comments-reloaded.php:67
-#, fuzzy
 msgid "Don't subscribe"
-msgstr "Laat beheerder abonneren"
+msgstr "Prenumerera inte"
 
+# Alla
 #: subscribe-to-comments-reloaded.php:68
 msgid "All"
-msgstr "Alles"
+msgstr "Alla"
 
 #: subscribe-to-comments-reloaded.php:69
 #: templates/user.php:65
 msgid "Replies to my comments"
-msgstr "Reacties op mijn reacties"
+msgstr "Endast svar på mina kommentarer"
 
 #: subscribe-to-comments-reloaded.php:70
 msgid "Daily digest"
-msgstr ""
+msgstr "Daglig sammanfattning"
 
-#: subscribe-to-comments-reloaded.php:221
-#: options/index.php:41
+#: subscribe-to-comments-reloaded.php:234
+#: options/index.php:46
 msgid "Manage subscriptions"
-msgstr "Beheer Abonnementen"
+msgstr "Administrera prenumerationer"
 
-#: subscribe-to-comments-reloaded.php:222
+#: subscribe-to-comments-reloaded.php:236
 msgid "To manage your subscriptions, please enter your email address here below. We will send you a message containing the link to access your personal management page."
-msgstr "Om je abonnementen te beheren moet je hieronder je e-mail adres invullen. We sturen je dan een persoonlijk link waar je je abonnementen aan kunt passen."
+msgstr "För att administrera dina prenumerationer, vänligen ange din e-postadress här nedanför. Du får sedan ett meddelande med en aktiveringslänk så att du kan komma åt din personliga administrationssida."
 
-#: subscribe-to-comments-reloaded.php:223
+#: subscribe-to-comments-reloaded.php:237
 msgid "Thank you for using our subscription service. Your request has been completed, and you should receive an email with the management link in a few minutes."
-msgstr "Bedankt voor het gebruikmaken van onze abonnementen service. Je aanvraag is voltooid en je ontvangt binnen enkele ogenblikken een e-mail met een link naar je persoonlijk beheerpagina."
+msgstr "Tack för att du prenumerar! Du borde få e-postmeddelandet med aktiveringslänken inom några minuter."
 
-#: subscribe-to-comments-reloaded.php:224
+#: subscribe-to-comments-reloaded.php:238
 msgid "You can follow the discussion on <strong>[post_title]</strong> without having to leave a comment. Cool, huh? Just enter your email address in the form here below and you're all set."
-msgstr "Je wilt je abonneren op de discussie <strong>[post_title]</strong> zonder zelf te reageren? Vul je e-mail adres hieronder in en de rest gaat vanzelf."
+msgstr "Du kan följa diskussionen för <strong>[post_title]</strong> utan att lämna en kommentar. Skriv bara in din e-postadress här nedanför så är det klart sen."
 
-#: subscribe-to-comments-reloaded.php:225
+#: subscribe-to-comments-reloaded.php:239
 msgid "Thank you for using our subscription service. Your request has been completed. You will receive a notification email every time a new comment to this article is approved and posted by the administrator."
-msgstr "Bedankt voor het gebruikmaken van onze abonnementen service. Je aanvraag is voltooid. Je ontvangt iedere keer een e-mail als er een nieuwe reactie is geplaatst."
+msgstr "Tack för att du prenumererar! Du kommer nu att få ett e-postmeddelande varje gång en kommentar publiceras på inlägget."
 
-#: subscribe-to-comments-reloaded.php:226
+#: subscribe-to-comments-reloaded.php:240
 msgid "Thank you for using our subscription service. In order to confirm your request, please check your email for the verification message and follow the instructions."
-msgstr "Bedankt voor het gebruikmaken van onze abonnementen service. Om je aanvraag te voltooien moet je deze eerst bevestigen. Je ontvangt hierover binnen enkele ogenblikken een e-mail bericht."
+msgstr "Tack för att du prenumererar! För att bekräfta prenumerationen, vänligen logga in på din e-post och följ instruktionerna i aktiveringsmeddelandet."
 
-#: subscribe-to-comments-reloaded.php:227
+#: subscribe-to-comments-reloaded.php:241
 msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list."
-msgstr "Om je abonnementenen aan te passen vink je het gewenste abonnement aan en klik je op de desgewenste actie."
-
-#: subscribe-to-comments-reloaded.php:228
-msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:"
-msgstr "Om je abonnementenen aan te passen vink je het gewenste abonnement aan en klik je op de desgewenste actie. Momenteel ben je geabonneerd op de volgende berichten:"
+msgstr "Vill du redigera dina prenumerationer? För att säga upp en eller flera prenumerationer, vänligen klicka i motsvarande ruta eller rutor och bekräfta på knappen längst ned."
 
 #: subscribe-to-comments-reloaded.php:242
-msgid "There is a new comment to [post_title]"
-msgstr "Er is een nieuwe reactie geplaatst bij [post_title]"
+msgid "In order to cancel or suspend one or more notifications, select the corresponding checkbox(es) and click on the button at the end of the list. You are currently subscribed to:"
+msgstr "Vill du redigera dina prenumerationer? För att säga upp en eller flera prenumerationer, vänligen klicka i motsvarande ruta eller rutor och bekräfta på knappen längst ned.  Du prenumererar för närvarande på:"
 
-#: subscribe-to-comments-reloaded.php:243
+#: subscribe-to-comments-reloaded.php:246
+msgid "There is a new comment to [post_title]"
+msgstr "Det har kommit en ny kommentar på [post_title]"
+
+#: subscribe-to-comments-reloaded.php:247
 msgid ""
 "There is a new comment to [post_title].\n"
 "Comment Link: [comment_permalink]\n"
@@ -103,45 +100,435 @@ msgid ""
 "[comment_content]\n"
 "Permalink: [post_permalink]\n"
 "Manage your subscriptions: [manager_link]"
-msgstr "Beheer je abonnementen op reacties: [manager_link]"
-"Er is een nieuwe reactie op [post_title].\n"
-"Link naar de reactie: [comment_permalink]\n"
-"Auteur: [comment_author]\n"
-"Reactie:\n"
-"[comment_content]\n"
-"Permalink: [post_permalink]\n"
-"Beheer je abonnementen: [manager_link]"
+msgstr ""
+"Det finns en ny kommentar på [post_title].\n"
+"Länk: [comment_permalink]\n"
+"Skriven av: [comment_author]\n"
+"Kommentar:[comment_content]\n"
+"Permalänk: [post_permalink]\n"
+"Redigera dina prenumerationer: [manager_link]"
 
-#: subscribe-to-comments-reloaded.php:250
+#: subscribe-to-comments-reloaded.php:248
 msgid "Please confirm your subscription to [post_title]"
-msgstr "Bevestig je abonnement op [post_title]"
+msgstr "Vänligen bekräfta din prenumeration på [post_title]"
 
-#: subscribe-to-comments-reloaded.php:251
+#: subscribe-to-comments-reloaded.php:249
 msgid ""
 "You have requested to be notified every time a new comment is added to:\n"
 "[post_permalink]\n"
 "\n"
 "Please confirm your request by clicking on this link:\n"
 "[confirm_link]"
-msgstr "Op <a href='[manager_link]'>deze pagina</a> kun je de abonnementen van dit bericht beheren."
+msgstr ""
+"Du, eller någon med din adress, har begärt att prenumerera på kommentarer till följande inlägg: [post_permalink]\n"
+"Vänligen bekräfta prenumerationen genom att klicka på länken här nedanför:\n"
+"[confirm_link] \n"
+"Om länken inte går att klicka på, kopiera adressen och klistra in den i adressfönstret på din webbläsare."
 
-#: subscribe-to-comments-reloaded.php:252
+#: subscribe-to-comments-reloaded.php:250
 msgid "Manage your subscriptions on [blog_name]"
-msgstr "Beheer je abonnementen op [blog_name]"
+msgstr "Administrera dina prenumerationer på [blog_name]"
 
-#: subscribe-to-comments-reloaded.php:253
+#: subscribe-to-comments-reloaded.php:251
 msgid ""
 "You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n"
 "[manager_link]"
 msgstr ""
-"Je hebt gevraagd om de link naar je abonnementen beheer pagina voor de website [blog_name]. Volg de volgende link om naar je persoonlijke beheer pagina te gaan:\n"
+"Du har begärt att redigera dina prenumerationer för artiklarna på [blog_name]. Följ denna länk för att logga in på din personliga sida: \n"
 "[manager_link]"
 
-#: subscribe-to-comments-reloaded.php:986
-msgid "Subscribed"
-msgstr "Geabonneerd"
+#: subscribe-to-comments-reloaded.php:1018
+#: options/panel2.php:42
+#: options/panel2.php:49
+#: options/panel2.php:56
+#: options/panel5.php:43
+#: options/panel5.php:50
+#: options/panel5.php:57
+#: options/panel5.php:64
+#: options/panel5.php:71
+#: options/panel5.php:78
+msgid "No"
+msgstr "Nej"
 
-#: subscribe-to-comments-reloaded.php:1000
+#: subscribe-to-comments-reloaded.php:1042
+msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
+msgstr "Behöver du hjälp med att använda Subscribe to Comments Reloaded? Besök det officiella"
+
+#: subscribe-to-comments-reloaded.php:1042
+msgid "support forum"
+msgstr "supportforumet"
+
+#: subscribe-to-comments-reloaded.php:1043
+msgid "Feeling generous?"
+msgstr "Känner du dig generös?"
+
+#: subscribe-to-comments-reloaded.php:1043
+msgid "Donate a few bucks!"
+msgstr "Donera några kronor!"
+
+#: options/index.php:47
+msgid "Comment Form"
+msgstr "Kommentarsfält"
+
+#: options/index.php:48
+msgid "Management Page"
+msgstr "Administrationssida"
+
+#: options/index.php:49
+msgid "Notifications"
+msgstr "Notifieringar"
+
+#: options/index.php:50
+#: options/panel2.php:35
+#: options/panel3.php:39
+#: options/panel4.php:36
+msgid "Options"
+msgstr "Alternativ"
+
+#: options/index.php:51
+msgid "You can help"
+msgstr "Du kan hjälpa till"
+
+#: options/panel1-business-logic.php:18
+msgid "Subscription added."
+msgstr "Prenumeration tillagd."
+
+#: options/panel1-business-logic.php:30
+msgid "Subscriptions updated."
+msgstr "Prenumerationer uppdaterade."
+
+#: options/panel1-business-logic.php:39
+msgid "Subscription deleted."
+msgstr "Prenumeration raderad."
+
+#: options/panel1-business-logic.php:54
+#: templates/author.php:22
+#: templates/user.php:22
+msgid "Subscriptions deleted:"
+msgstr "Raderade prenumerationer:"
+
+#: options/panel1-business-logic.php:58
+#: templates/author.php:26
+#: templates/user.php:26
+msgid "Subscriptions suspended:"
+msgstr "Pausade prenumerationer:"
+
+#: options/panel1-business-logic.php:62
+#: templates/author.php:30
+#: templates/user.php:30
+msgid "Subscriptions activated:"
+msgstr "Aktiverade prenumerationer:"
+
+#: options/panel1-business-logic.php:66
+#: options/panel1-business-logic.php:70
+#: templates/author.php:34
+#: templates/author.php:38
+#: templates/user.php:34
+msgid "Subscriptions updated:"
+msgstr "Uppdaterade prenumerationer:"
+
+#: options/panel1-business-logic.php:94
+msgid "&laquo; Previous"
+msgstr "&laquo; Tidigare"
+
+#: options/panel1-business-logic.php:98
+msgid "Next &raquo;"
+msgstr "Nästa &raquo;"
+
+#: options/panel1-edit-subscription.php:8
+msgid "Update Subscription"
+msgstr "Uppdatera prenumeration"
+
+#: options/panel1-edit-subscription.php:10
+#: options/panel1-edit-subscription.php:14
+#: options/panel1-edit-subscription.php:15
+#: options/panel1-edit-subscription.php:16
+#: options/panel1.php:23
+#: options/panel1.php:24
+#: options/panel1.php:25
+msgid "optional"
+msgstr "frivilligt"
+
+#: options/panel1-edit-subscription.php:10
+#: options/panel1.php:19
+#: options/panel1.php:81
+#: options/panel1.php:117
+#: templates/author.php:50
+#: templates/user.php:46
+msgid "Please remember: this operation cannot be undone. Are you sure you want to proceed?"
+msgstr "OBS! Detta val kan inte ångras. Är du säker på att du vill fortsätta?"
+
+#: options/panel1-edit-subscription.php:12
+msgid "Post:"
+msgstr "Inlägg:"
+
+#: options/panel1-edit-subscription.php:13
+#: options/panel1.php:21
+msgid "From"
+msgstr "Från"
+
+#: options/panel1-edit-subscription.php:14
+#: options/panel1.php:22
+msgid "To"
+msgstr "Till"
+
+#: options/panel1-edit-subscription.php:17
+#: options/panel1.php:26
+#: options/panel1.php:45
+#: options/panel1.php:103
+msgid "Status"
+msgstr "Status"
+
+#: options/panel1-edit-subscription.php:19
+#: options/panel1.php:28
+msgid "Keep unchanged"
+msgstr "Lämna oförändrat"
+
+#: options/panel1-edit-subscription.php:20
+#: options/panel1.php:29
+#: options/panel1.php:47
+msgid "Active"
+msgstr "Aktiv"
+
+#: options/panel1-edit-subscription.php:21
+#: options/panel1.php:30
+#: options/panel1.php:48
+msgid "Replies only"
+msgstr "Endast svar"
+
+#: options/panel1-edit-subscription.php:22
+#: options/panel1.php:31
+msgid "Suspended"
+msgstr "Pausad"
+
+#: options/panel1-edit-subscription.php:23
+#: options/panel1.php:32
+msgid "Update"
+msgstr "Uppdatera"
+
+#: options/panel1.php:17
+msgid "Mass Update Subscriptions"
+msgstr "Uppdatera flera"
+
+#: options/panel1.php:39
+msgid "Add New Subscription"
+msgstr "Lägg till prenumeration"
+
+#: options/panel1.php:43
+msgid "Post ID"
+msgstr "Inlägg ID"
+
+#: options/panel1.php:44
+#: options/panel1.php:90
+#: templates/request-management-link.php:65
+#: templates/subscribe.php:86
+#: templates/user.php:51
+msgid "Email"
+msgstr "E-post"
+
+#: options/panel1.php:49
+msgid "Ask user to confirm"
+msgstr "Be användare att bekräfta"
+
+#: options/panel1.php:50
+msgid "Add"
+msgstr "Lägg till"
+
+#: options/panel1.php:59
+msgid "Search subscriptions"
+msgstr "Sök bland prenumerationer"
+
+#: options/panel1.php:61
+#, php-format
+msgid "You can either <a href=\"%s\">view all the subscriptions</a> or find those where the"
+msgstr "Du kan antingen <a href=\"%s\">se alla prenumerationer</a> eller hitta de där"
+
+#: options/panel1.php:64
+msgid "email"
+msgstr "e-post"
+
+#: options/panel1.php:65
+msgid "post ID"
+msgstr "inlägg ID"
+
+#: options/panel1.php:66
+msgid "status"
+msgstr "status"
+
+#: options/panel1.php:69
+msgid "equals"
+msgstr "är lika med"
+
+#: options/panel1.php:70
+msgid "contains"
+msgstr "innehåller"
+
+#: options/panel1.php:71
+msgid "does not contain"
+msgstr "innehåller inte"
+
+#: options/panel1.php:72
+msgid "starts with"
+msgstr "börjar med"
+
+#: options/panel1.php:73
+msgid "ends with"
+msgstr "slutar med"
+
+#: options/panel1.php:76
+msgid "results per page:"
+msgstr "resultat per sida:"
+
+#: options/panel1.php:77
+msgid "Search"
+msgstr "Sök"
+
+#: options/panel1.php:85
+msgid "Reverse the order by Post ID"
+msgstr "Omvänd ordningen med Post ID"
+
+#: options/panel1.php:86
+#: options/panel1.php:87
+msgid "Reverse the order by Date/Time"
+msgstr "Omvänd ordningen med Datum/Tid"
+
+#: options/panel1.php:89
+msgid "Post (ID)"
+msgstr "Inlägg (ID)"
+
+#: options/panel1.php:92
+msgid "Search query:"
+msgstr "Sök:"
+
+#: options/panel1.php:92
+msgid "Rows:"
+msgstr "Rader:"
+
+#: options/panel1.php:92
+msgid "of"
+msgstr "av"
+
+#: options/panel1.php:93
+#: templates/author.php:56
+#: templates/user.php:52
+msgid "Legend: Y = all comments, R = replies only, C = inactive"
+msgstr "Legend: Y = alla kommentarer, R = endast svar, C = inaktiv"
+
+#: options/panel1.php:102
+msgid "Date and Time"
+msgstr "Datum och Tid"
+
+#: options/panel1.php:114
+msgid "Subscription"
+msgstr "Prenumeration"
+
+#: options/panel1.php:116
+msgid "Edit"
+msgstr "Redigera"
+
+#: options/panel1.php:117
+#: templates/author.php:69
+#: templates/user.php:63
+msgid "Delete"
+msgstr "Radera"
+
+#: options/panel1.php:125
+#: templates/author.php:68
+#: templates/user.php:62
+msgid "Action:"
+msgstr "Handling:"
+
+#: options/panel1.php:126
+msgid "Delete forever"
+msgstr "Radera permanent"
+
+#: options/panel1.php:127
+#: templates/author.php:70
+#: templates/user.php:64
+msgid "Suspend"
+msgstr "Inaktivera"
+
+#: options/panel1.php:128
+msgid "Activate and set to Y"
+msgstr "Aktivera och sätt som Y"
+
+#: options/panel1.php:129
+msgid "Activate and set to R"
+msgstr "Aktivera och sätt som R"
+
+#: options/panel1.php:130
+#: templates/author.php:72
+#: templates/user.php:66
+msgid "Activate"
+msgstr "Aktivera"
+
+#: options/panel1.php:131
+#: templates/author.php:73
+#: templates/user.php:67
+msgid "Update subscriptions"
+msgstr "Uppdatera prenumerationer"
+
+#: options/panel1.php:135
+msgid "Sorry, no subscriptions match your search criteria."
+msgstr "Beklagar, men inga prenumerationer matchar dina sökkriteria."
+
+#: options/panel2.php:11
+#: options/panel2.php:39
+msgid "Enable default checkbox"
+msgstr "Aktivera standardmarkeringsruta"
+
+#: options/panel2.php:12
+#: options/panel2.php:46
+msgid "Checked by default"
+msgstr "Välj som standard"
+
+#: options/panel2.php:13
+#: options/panel2.php:53
+msgid "Advanced subscription"
+msgstr "Avancerad prenumeration"
+
+#: options/panel2.php:14
+#: options/panel2.php:60
+msgid "Custom inline style"
+msgstr "Inline-CSS"
+
+#: options/panel2.php:15
+#: options/panel2.php:65
+msgid "Custom HTML"
+msgstr "Egendefinierad HTML"
+
+#: options/panel2.php:17
+msgid "Checkbox label"
+msgstr "Etikett for ikryssningsruta"
+
+#: options/panel2.php:18
+#: options/panel2.php:81
+msgid "Subscribed label"
+msgstr "Etikett prenumeration"
+
+#: options/panel2.php:19
+msgid "Awaiting label"
+msgstr "Obestämd etikett"
+
+#: options/panel2.php:20
+#: options/panel2.php:91
+msgid "Author label"
+msgstr "Etikett författare"
+
+#: options/panel2.php:25
+#: options/panel3.php:26
+#: options/panel4.php:25
+#: options/panel5.php:22
+msgid "Your settings have been successfully updated."
+msgstr "Dina inställningar har sparats."
+
+#: options/panel2.php:28
+#: options/panel3.php:29
+#: options/panel4.php:28
+#: options/panel5.php:25
+msgid "There was an error updating the following fields:"
+msgstr "Det uppstod ett fel vid uppdateringen av följande:"
+
 #: options/panel2.php:41
 #: options/panel2.php:48
 #: options/panel2.php:55
@@ -154,581 +541,148 @@ msgstr "Geabonneerd"
 msgid "Yes"
 msgstr "Ja"
 
-#: subscribe-to-comments-reloaded.php:1002
-msgid "Replies"
-msgstr "Reacties op je reacties"
-
-#: subscribe-to-comments-reloaded.php:1004
-msgid "Digest"
-msgstr ""
-
-#: subscribe-to-comments-reloaded.php:1006
-msgid "Pending"
-msgstr "Wordt gecontroleerd"
-
-#: subscribe-to-comments-reloaded.php:1007
-#: options/panel2.php:42
-#: options/panel2.php:49
-#: options/panel2.php:56
-#: options/panel5.php:43
-#: options/panel5.php:50
-#: options/panel5.php:57
-#: options/panel5.php:64
-#: options/panel5.php:71
-#: options/panel5.php:78
-msgid "No"
-msgstr "Nee"
-
-#: subscribe-to-comments-reloaded.php:1016
-#, fuzzy
-msgid "Subscriptions"
-msgstr "Beheer Abonnementen"
-
-#: subscribe-to-comments-reloaded.php:1039
-msgid "Need help on how to use Subscribe to Comments Reloaded? Visit the official"
-msgstr "Hulp nodig bij het gebruik van de Subscribe to Comments Reloaded plugin? Bezoek de officiele"
-
-#: subscribe-to-comments-reloaded.php:1039
-msgid "support forum"
-msgstr "support forum"
-
-#: subscribe-to-comments-reloaded.php:1040
-msgid "Feeling generous?"
-msgstr "Wees eens gul!"
-
-#: subscribe-to-comments-reloaded.php:1040
-msgid "Donate a few bucks!"
-msgstr "Doneer een paar centen!"
-
-#: options/index.php:42
-#, fuzzy
-msgid "Comment Form"
-msgstr "Reactie formulier"
-
-#: options/index.php:43
-#, fuzzy
-msgid "Management Page"
-msgstr "Beheerpagina"
-
-#: options/index.php:44
-#, fuzzy
-msgid "Notifications"
-msgstr "Notificatie onderwerp"
-
-#: options/index.php:45
-#: options/panel2.php:35
-#: options/panel3.php:39
-#: options/panel4.php:34
-msgid "Options"
-msgstr "Opties"
-
-#: options/index.php:46
-msgid "You can help"
-msgstr "Je kunt helpen"
-
-#: options/panel1-business-logic.php:18
-#, fuzzy
-msgid "Subscription added."
-msgstr "Aanvraag verwerkt"
-
-#: options/panel1-business-logic.php:30
-#, fuzzy
-msgid "Subscriptions updated."
-msgstr "Aanvraag verwerkt"
-
-#: options/panel1-business-logic.php:39
-#, fuzzy
-msgid "Subscription deleted."
-msgstr "Aanvraag verwerkt"
-
-#: options/panel1-business-logic.php:54
-#: templates/author.php:22
-#: templates/user.php:22
-#, fuzzy
-msgid "Subscriptions deleted:"
-msgstr "Abonnementen voor:"
-
-#: options/panel1-business-logic.php:58
-#: templates/author.php:26
-#: templates/user.php:26
-#, fuzzy
-msgid "Subscriptions suspended:"
-msgstr "Aanvraag verwerkt"
-
-#: options/panel1-business-logic.php:62
-#: templates/author.php:30
-#: templates/user.php:30
-#, fuzzy
-msgid "Subscriptions activated:"
-msgstr "Abonnementen voor:"
-
-#: options/panel1-business-logic.php:66
-#: options/panel1-business-logic.php:70
-#: templates/author.php:34
-#: templates/author.php:38
-#: templates/user.php:34
-#, fuzzy
-msgid "Subscriptions updated:"
-msgstr "Abonnementen voor:"
-
-#: options/panel1-business-logic.php:94
-msgid "&laquo; Previous"
-msgstr "&laquo; Vorige"
-
-#: options/panel1-business-logic.php:98
-msgid "Next &raquo;"
-msgstr "Volgende &raquo;"
-
-#: options/panel1-edit-subscription.php:8
-#, fuzzy
-msgid "Update Subscription"
-msgstr "Abonnement bijwerken"
-
-#: options/panel1-edit-subscription.php:10
-#: options/panel1.php:19
-#: options/panel1.php:81
-#: options/panel1.php:113
-#: templates/author.php:50
-#: templates/user.php:46
-msgid "Please remember: this operation cannot be undone. Are you sure you want to proceed?"
-msgstr "Let op! Deze handeling kan niet ongedaan worden gemaakt. Weet je zeker dat je door wilt gaan?"
-
-#: options/panel1-edit-subscription.php:12
-#, fuzzy
-msgid "Post:"
-msgstr "Rijen:"
-
-#: options/panel1-edit-subscription.php:13
-#: options/panel1.php:21
-msgid "From"
-msgstr "Van"
-
-#: options/panel1-edit-subscription.php:14
-#: options/panel1.php:22
-msgid "To"
-msgstr "Naar"
-
-#: options/panel1-edit-subscription.php:15
-#: options/panel1.php:26
-#: options/panel1.php:45
-#: options/panel1.php:103
-msgid "Status"
-msgstr "Status"
-
-#: options/panel1-edit-subscription.php:17
-#: options/panel1.php:28
-msgid "Keep unchanged"
-msgstr ""
-
-#: options/panel1-edit-subscription.php:18
-#: options/panel1.php:29
-#: options/panel1.php:47
-#, fuzzy
-msgid "Active"
-msgstr "Actie"
-
-#: options/panel1-edit-subscription.php:19
-#: options/panel1.php:30
-#: options/panel1.php:48
-msgid "Replies only"
-msgstr ""
-
-#: options/panel1-edit-subscription.php:20
-#: options/panel1.php:31
-#, fuzzy
-msgid "Suspended"
-msgstr "Pauzeren"
-
-#: options/panel1-edit-subscription.php:21
-#: options/panel1.php:32
-msgid "Update"
-msgstr "Bijwerken"
-
-#: options/panel1.php:17
-#, fuzzy
-msgid "Mass Update Subscriptions"
-msgstr "Abonnementen bijwerken"
-
-#: options/panel1.php:23
-#: options/panel1.php:24
-#: options/panel1.php:25
-#, fuzzy
-msgid "optional"
-msgstr "Opties"
-
-#: options/panel1.php:39
-#, fuzzy
-msgid "Add New Subscription"
-msgstr "Nieuw abonnement voor"
-
-#: options/panel1.php:43
-#, fuzzy
-msgid "Post ID"
-msgstr "Post (ID)"
-
-#: options/panel1.php:44
-#: options/panel1.php:90
-#: templates/request-management-link.php:65
-#: templates/subscribe.php:87
-#: templates/user.php:51
-msgid "Email"
-msgstr "E-mail"
-
-#: options/panel1.php:49
-msgid "Ask user to confirm"
-msgstr "Vraag gebruiker te bevestigen"
-
-#: options/panel1.php:50
-msgid "Add"
-msgstr "Voeg toe"
-
-#: options/panel1.php:59
-#, fuzzy
-msgid "Search subscriptions"
-msgstr "Beheer Abonnementen"
-
-#: options/panel1.php:61
-#, fuzzy, php-format
-msgid "You can either <a href=\"%s\">view all the subscriptions</a> or find those where the"
-msgstr "Je kunt <a href=\"%s\">hier alle abonnementen bekijken</a> of filter hier op <b>e-mail</b>"
-
-#: options/panel1.php:64
-#, fuzzy
-msgid "email"
-msgstr "E-mail"
-
-#: options/panel1.php:65
-#, fuzzy
-msgid "post ID"
-msgstr "Post (ID)"
-
-#: options/panel1.php:66
-#, fuzzy
-msgid "status"
-msgstr "Status"
-
-#: options/panel1.php:69
-msgid "equals"
-msgstr "is exact"
-
-#: options/panel1.php:70
-msgid "contains"
-msgstr "bevat"
-
-#: options/panel1.php:71
-msgid "does not contain"
-msgstr "bevat niet"
-
-#: options/panel1.php:72
-msgid "starts with"
-msgstr ""
-
-#: options/panel1.php:73
-msgid "ends with"
-msgstr "Eindigt met"
-
-#: options/panel1.php:76
-msgid "results per page:"
-msgstr "Resultaten per pagina"
-
-#: options/panel1.php:77
-msgid "Search"
-msgstr "Zoeken"
-
-#: options/panel1.php:85
-msgid "Reverse the order by Post ID"
-msgstr "Keer sortering om op Post ID"
-
-#: options/panel1.php:86
-#: options/panel1.php:87
-msgid "Reverse the order by Date/Time"
-msgstr "Keer sortering om op Datum/Tijd"
-
-#: options/panel1.php:89
-msgid "Post (ID)"
-msgstr "Post (ID)"
-
-#: options/panel1.php:92
-#, fuzzy
-msgid "Search query:"
-msgstr "Zoeken"
-
-#: options/panel1.php:92
-msgid "Rows:"
-msgstr "Rijen:"
-
-#: options/panel1.php:92
-msgid "of"
-msgstr "van"
-
-#: options/panel1.php:93
-#: templates/author.php:56
-#: templates/user.php:52
-msgid "Legend: Y = all comments, R = replies only, C = inactive"
-msgstr "Legenda: Y = alle reacties, R = alleen reacties op je reacties, C = inactief"
-
-#: options/panel1.php:102
-msgid "Date and Time"
-msgstr "Datum en Tijd"
-
-#: options/panel1.php:112
-msgid "Edit"
-msgstr "Bewerk"
-
-#: options/panel1.php:113
-#: templates/author.php:69
-#: templates/user.php:63
-msgid "Delete"
-msgstr "Verwijderen"
-
-#: options/panel1.php:121
-#: templates/author.php:68
-#: templates/user.php:62
-msgid "Action:"
-msgstr "Actie:"
-
-#: options/panel1.php:122
-msgid "Delete forever"
-msgstr "Verwijderen"
-
-#: options/panel1.php:123
-#: templates/author.php:70
-#: templates/user.php:64
-msgid "Suspend"
-msgstr "Pauzeren"
-
-#: options/panel1.php:124
-msgid "Activate and set to Y"
-msgstr "Activeer en verander naar Y"
-
-#: options/panel1.php:125
-msgid "Activate and set to R"
-msgstr "Activeer en verander naar R"
-
-#: options/panel1.php:126
-#: templates/author.php:72
-#: templates/user.php:66
-msgid "Activate"
-msgstr "Activeer"
-
-#: options/panel1.php:127
-#: templates/author.php:73
-#: templates/user.php:67
-msgid "Update subscriptions"
-msgstr "Abonnementen bijwerken"
-
-#: options/panel1.php:131
-#, fuzzy
-msgid "Sorry, no subscriptions match your search criteria."
-msgstr "Sorry, er zijn geen abonnementen gevonden voor"
-
-#: options/panel2.php:11
-#: options/panel2.php:39
-#, fuzzy
-msgid "Enable default checkbox"
-msgstr "Dubbele check activeren"
-
-#: options/panel2.php:12
-#: options/panel2.php:46
-msgid "Checked by default"
-msgstr "Standaard aangevinkt"
-
-#: options/panel2.php:13
-#: options/panel2.php:53
-#, fuzzy
-msgid "Advanced subscription"
-msgstr "Abonnement bijwerken"
-
-#: options/panel2.php:14
-#: options/panel2.php:60
-msgid "Custom inline style"
-msgstr "Aangepaste stijl direct in code"
-
-#: options/panel2.php:15
-#: options/panel2.php:65
-msgid "Custom HTML"
-msgstr "Aangepaste HTML"
-
-#: options/panel2.php:17
-msgid "Checkbox label"
-msgstr "Checkbox label"
-
-#: options/panel2.php:18
-#: options/panel2.php:81
-msgid "Subscribed label"
-msgstr "Geabonneerd label"
-
-#: options/panel2.php:19
-msgid "Awaiting label"
-msgstr "Confirmatie label"
-
-#: options/panel2.php:20
-#: options/panel2.php:91
-msgid "Author label"
-msgstr "Auteur label"
-
-#: options/panel2.php:25
-#: options/panel3.php:26
-#: options/panel4.php:23
-#: options/panel5.php:22
-msgid "Your settings have been successfully updated."
-msgstr "De instellingen zijn succesvol bijgewerkt."
-
-#: options/panel2.php:28
-#: options/panel3.php:29
-#: options/panel4.php:26
-#: options/panel5.php:25
-msgid "There was an error updating the following fields:"
-msgstr "Er deed zich een probleem voor tijdens het bijwerken van de volgende velden:"
-
 #: options/panel2.php:43
 msgid "Disable this option if you want to move the subscription checkbox to a different place on your page."
-msgstr "Zet deze optie uit als je de checkbox op een andere plek in de pagina wilt zetten"
+msgstr "Inaktivera detta alternativ om du vill flytta ikryssningsrutan för prenumeration till någon annanstans på sidan."
 
 #: options/panel2.php:50
 msgid "Decide if the checkbox should be checked by default or not."
-msgstr "Denk erover na of het vinkje standaard aangevinkt moet staan of niet."
+msgstr "Anger om ikryssningsrutan ska vara förkryssad som standard."
 
 #: options/panel2.php:57
 msgid "Allow users to choose from different subscription types (all, replies only)."
-msgstr " Sta gebruikers te kiezen tussen verschillende abonnementstypen."
+msgstr "Tillåt användare att välja olika prenumerationstyper (alla, endast svar)."
 
 #: options/panel2.php:62
 msgid "Custom inline CSS to add to the checkbox."
-msgstr "Aangepaste CSS code die je direct hier kunt invoeren."
+msgstr "Egen inline-CSS att använda till ikryssningsrutan."
 
 #: options/panel2.php:67
 msgid "Custom HTML code to be used when displaying the checkbox. Allowed tags: [checkbox_field], [checkbox_label]"
-msgstr "Aangepaste HTML code die gebruikt wordt tijdens het aanroepen van de checkbox. Tags die zijn toegestaan: [checkbox_field], [checkbox_label]"
+msgstr "Egendefinierad HTML-kod för ikryssningsrutan. Tillåtna taggar: [checkbox_field], [checkbox_label]"
 
 #: options/panel2.php:72
 msgid "Messages for your visitors"
-msgstr "Berichten voor bezoekers"
+msgstr "Meddelande till dina besökare"
 
 #: options/panel2.php:76
-#, fuzzy
 msgid "Default label"
-msgstr "Auteur label"
+msgstr "Standardetikett"
 
 #: options/panel2.php:78
 msgid "Label associated to the checkbox. Allowed tag: [subscribe_link]"
-msgstr "Label dat bij de checkbox hoort. Beschikbare tag: [subscribe_link]"
+msgstr "Etikett förknippad med ikryssningsrutan. Tillåtna taggar: [subscribe_link]"
 
 #: options/panel2.php:83
 msgid "Label shown to those who are already subscribed to a post. Allowed tag: [manager_link]"
-msgstr "Label dat getoond wordt aan gebruikers die al geabonneerd zijn op een bericht. Beschikbare tag: [manager_link]"
+msgstr "Etikett som visas för de som redan prenumererar på inlägget. Tillåtna taggar: [manager_link]"
 
 #: options/panel2.php:86
-#, fuzzy
 msgid "Pending label"
-msgstr "Confirmatie label"
+msgstr "Obekräftad etikett"
 
 #: options/panel2.php:88
 msgid "Label shown to those who are already subscribed, but haven't clicked on the confirmation link yet. Allowed tag: [manager_link]"
-msgstr "Label dat wordt getoond aan gebruikers die al geabonneerd zijn, maar dit nog niet hebben bevestigd via hun e-mail. Beschikbare tag: [manager_link]"
+msgstr "Etikett som visas för de som redan prenumererar, men inte har klickat på aktiveringslänken än. Tillåtna taggar: [manager_link]"
 
 #: options/panel2.php:93
 msgid "Label shown to authors (and administrators). Allowed tag: [manager_link]"
-msgstr "Label dat wordt getoond aan auteurs (en beheerders). Beschikbare tag: [manager_link]"
+msgstr "Etikett som visas för författare (och administratörer). Tillåtna taggar: [manager_link]"
 
 #: options/panel2.php:97
 #: options/panel3.php:145
-#: options/panel4.php:103
+#: options/panel4.php:105
 #: options/panel5.php:83
 msgid "Save Changes"
-msgstr "Opslaan"
+msgstr "Spara ändringar"
 
 #: options/panel3.php:10
 #: options/panel3.php:43
-#, fuzzy
 msgid "Virtual Management Page"
-msgstr "Beheerpagina"
+msgstr "Administrationssida"
 
 #: options/panel3.php:11
 #: options/panel3.php:51
 msgid "Page title"
-msgstr "Pagina titel"
+msgstr "Sidans titel"
 
 #: options/panel3.php:12
 #: options/panel3.php:56
-#, fuzzy
 msgid "Management URL"
-msgstr "Beheerpagina"
+msgstr "Administrationssida URL"
 
 #: options/panel3.php:13
 #: options/panel3.php:63
 msgid "Custom HEAD meta"
-msgstr "Custom HEAD meta"
+msgstr "Modifiera meta för HEAD"
 
 #: options/panel3.php:15
 #: options/panel3.php:74
 msgid "Request link"
-msgstr "Aanvraag link"
+msgstr "Begär länk"
 
 #: options/panel3.php:16
 #: options/panel3.php:84
 msgid "Request submitted"
-msgstr "Aanvraag verzonden"
+msgstr "Begäran har sänts"
 
 #: options/panel3.php:17
 #: options/panel3.php:94
 msgid "Subscribe without commenting"
-msgstr "Abonneer zonder te reageren"
+msgstr "Prenumerera utan att kommentera"
 
 #: options/panel3.php:18
 #: options/panel3.php:104
 msgid "Subscription processed"
-msgstr "Aanvraag verwerkt"
+msgstr "Om prenumeration har behandlats"
 
 #: options/panel3.php:19
 #: options/panel3.php:114
 msgid "Subscription processed (DCI)"
-msgstr "Aanvraag verwerkt (DCI)"
+msgstr "Om prenumeration har behandlats (DCI)"
 
 #: options/panel3.php:20
 #: options/panel3.php:124
 msgid "Authors"
-msgstr "Auteurs"
+msgstr "Författare"
 
 #: options/panel3.php:21
 #: options/panel3.php:134
 msgid "Users"
-msgstr "Gebruikers"
+msgstr "Användare"
 
 #: options/panel3.php:45
 msgid "Enabled"
-msgstr "Geactiveerd"
+msgstr "Aktiverat"
 
 #: options/panel3.php:46
 msgid "Disabled"
-msgstr "Dedeactiveerd"
+msgstr "Inaktiverat"
 
 #: options/panel3.php:47
 msgid "Disable the virtual management page if you need to create a <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">real page</a> to make your theme happy."
-msgstr "Zet de virtuele management pagina uit als je een <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">echte pagina</a> moet creëren."
+msgstr "Inaktivera den virtuella administrationssidan om du behöver skapa en <a href=\"http://lab.duechiacchiere.it/index.php?topic=71.0\">riktig sida</a> för att komma överens med ditt tema."
 
 #: options/panel3.php:53
 msgid "Title of the page your visitors will use to manage their subscriptions."
-msgstr "Titel van de pagina waar gebruikers hun abonnementen aan kunnen passen."
+msgstr "Titel på sidan där besökarna kan redigera sina prenumerationer."
 
 #: options/panel3.php:58
-#, fuzzy
 msgid "The permalink for your management page (something like <code>/manage-subscriptions</code> or <code>/?page_id=345</code>). This page <b>does not</b> actually exist in the system, but its link must follow your permalink structure."
-msgstr "De permalink voor je abonnementen beheer pagina (zoiets als <code>/manage-subscriptions</code> of <code>/?page_id=345</code>). Deze pagina <b>bestaat niet</b> daadwerkelijk in het systeem, maar de permalink moet wel voldoen aan je Wordpress permalink instellingen."
+msgstr "Permalänken för administrationssidan (ex. <code>/manage-subscriptions</code> eller <code>/?page_id=345</code>). Denna sida existerar egentligen <b>inte</b>, men dess länk måste följa din permalänkstruktur."
 
 #: options/panel3.php:60
 msgid "Warning: it looks like the value you are using may be incompatible with your permalink structure"
-msgstr ""
+msgstr "Varning: det ser ut som att värdet du använder kanske är inkompetibelt med din permalänkstruktur"
 
 #: options/panel3.php:65
 msgid "Specify your custom HTML code to be added to the HEAD section of the page. Use <strong>single</strong> quotes for values."
-msgstr ""
+msgstr "Skriv in din egna HTML-kod som ska läggas till Header-delen av sidan. Använd <strong>enkelcitat</strong> (enkla apostrofer, inte citattecken alltså) för värden."
 
 #: options/panel3.php:70
-#: options/panel4.php:50
-#, fuzzy
+#: options/panel4.php:52
 msgid "Messages"
-msgstr "E-mail Berichten"
+msgstr "Meddelanden"
 
 #: options/panel3.php:75
 #: options/panel3.php:85
@@ -737,11 +691,11 @@ msgstr "E-mail Berichten"
 #: options/panel3.php:115
 #: options/panel3.php:125
 #: options/panel3.php:135
-#: options/panel4.php:61
-#: options/panel4.php:77
-#: options/panel4.php:93
+#: options/panel4.php:63
+#: options/panel4.php:79
+#: options/panel4.php:95
 msgid "Bold"
-msgstr ""
+msgstr "Fetstil"
 
 #: options/panel3.php:76
 #: options/panel3.php:86
@@ -750,11 +704,11 @@ msgstr ""
 #: options/panel3.php:116
 #: options/panel3.php:126
 #: options/panel3.php:136
-#: options/panel4.php:62
-#: options/panel4.php:78
-#: options/panel4.php:94
+#: options/panel4.php:64
+#: options/panel4.php:80
+#: options/panel4.php:96
 msgid "Italic"
-msgstr ""
+msgstr "Kursivt"
 
 #: options/panel3.php:77
 #: options/panel3.php:87
@@ -763,11 +717,11 @@ msgstr ""
 #: options/panel3.php:117
 #: options/panel3.php:127
 #: options/panel3.php:137
-#: options/panel4.php:63
-#: options/panel4.php:79
-#: options/panel4.php:95
+#: options/panel4.php:65
+#: options/panel4.php:81
+#: options/panel4.php:97
 msgid "Link"
-msgstr ""
+msgstr "Länk"
 
 #: options/panel3.php:78
 #: options/panel3.php:88
@@ -776,217 +730,216 @@ msgstr ""
 #: options/panel3.php:118
 #: options/panel3.php:128
 #: options/panel3.php:138
-#: options/panel4.php:64
-#: options/panel4.php:80
-#: options/panel4.php:96
+#: options/panel4.php:66
+#: options/panel4.php:82
+#: options/panel4.php:98
 msgid "Image"
-msgstr ""
+msgstr "Bild"
 
 #: options/panel3.php:81
 msgid "Text shown to those who request to manage their subscriptions."
-msgstr "Tekst dat op het scherm verschijnt bij gebruikers die hun abonnementen willen aanpassen."
+msgstr "Text som visas för de som har begärt att få redigera sina prenumerationer."
 
 #: options/panel3.php:91
 msgid "Thank you note shown after the request here above has been processed. Allowed tags: [post_title], [post_permalink]"
-msgstr "Het bedankberichtje dat wordt getoond als bovenstaande aanvragen zijn doorgevoerd. Beschikbare tags: [post_title], [post_permalink]"
+msgstr "Tackmeddelande som visas efter att begäran har bearbetats. Tillåtna taggar: [post_title], [post_permalink]"
 
 #: options/panel3.php:101
 msgid "Text shown to those who want to subscribe without commenting. Allowed tags: [post_title], [post_permalink]"
-msgstr "Tekst die wordt getoond aan gebruikers die willen abonneren zonder eerst zelf te reageren. Beschikbare tags: [post_title], [post_permalink]"
+msgstr "Text som visas för de som vill prenumerera utan att kommentera. Tillåtna taggar: [post_title], [post_permalink]"
 
 #: options/panel3.php:111
 msgid "Thank you note shown after the subscription request has been processed (double check-in disabled). Allowed tags: [post_title], [post_permalink]"
-msgstr "Het bedankberichtje dat wordt getoond nadat de aanvragen zijn doorgevoerd (als double check-in uit staat). Beschikbare tags: [post_title], [post_permalink]"
+msgstr "Tackmeddelande som visas efter att begäran om prenumeration har bearbetats (med dubbelkoll inaktiverad). Tillåtna taggar: [post_title], [post_permalink]"
 
 #: options/panel3.php:121
 msgid "Thank you note shown after the subscription request has been processed (double check-in enabled). Allowed tags: [post_title], [post_permalink]"
-msgstr "Een bedankberichtje dat wordt getoond als een gebruiker een abonnement heeft aangevraagd. Double check-in moet aan staan). Beschikbare tags: [post_title], [post_permalink]"
+msgstr "Tackmeddelande som visas efter att begäran om prenumeration har bearbetats (med dubbelkoll aktiverad). Tillåtna taggar: [post_title], [post_permalink]"
 
 #: options/panel3.php:131
 msgid "Introductory text for the authors' management page."
-msgstr "Intoductie tekst voor de beheerpagina van auteurs."
+msgstr "Introtext på författarnas administrationssida."
 
 #: options/panel3.php:141
 msgid "Introductory text for the users' management page."
-msgstr "Intoductie tekst voor de beheerpagina van de gebruikers."
-
-#: options/panel4.php:11
-#: options/panel4.php:38
-msgid "Sender name"
-msgstr "Zender"
-
-#: options/panel4.php:12
-#: options/panel4.php:43
-msgid "Sender email address"
-msgstr "E-mail adres van zender"
+msgstr "Introtext på användarnas administrationssida."
 
 #: options/panel4.php:13
-#: options/panel4.php:54
-msgid "Notification subject"
-msgstr "Notificatie onderwerp"
+#: options/panel4.php:40
+msgid "Sender name"
+msgstr "Avsändare"
 
 #: options/panel4.php:14
-#: options/panel4.php:59
-msgid "Notification message"
-msgstr "Notificatie bericht"
+#: options/panel4.php:45
+msgid "Sender email address"
+msgstr "Avsändarens adress"
 
 #: options/panel4.php:15
-#: options/panel4.php:70
-msgid "Double check subject"
-msgstr "Onderwerp dubbel checken"
+#: options/panel4.php:56
+msgid "Notification subject"
+msgstr "Titel på meddelande"
 
 #: options/panel4.php:16
-#: options/panel4.php:75
-msgid "Double check message"
-msgstr "Bericht dubbel checken"
+#: options/panel4.php:61
+msgid "Notification message"
+msgstr "Meddelande"
 
 #: options/panel4.php:17
-#: options/panel4.php:86
-msgid "Management subject"
-msgstr "Beheer onderwerp"
+#: options/panel4.php:72
+msgid "Double check subject"
+msgstr "Dubbelkolla ämne"
 
 #: options/panel4.php:18
-#: options/panel4.php:91
-msgid "Management message"
-msgstr "Beheer bericht"
+#: options/panel4.php:77
+msgid "Double check message"
+msgstr "Dubbelkolla meddelande"
 
-#: options/panel4.php:40
-msgid "Name to use for the \"from\" field when sending a new notification to the user."
-msgstr "Naam die voor het \"from\" veld gebruikt moet worden bij het versturen van notificaties naar de gebruiker."
-
-#: options/panel4.php:45
-msgid "Email address to use for the \"from\" field when sending a new notification to the user."
-msgstr "E-mail adres dat gebruikt moet worden voor het \"from\" veld tijdens het versturen van notificaties naar de gebruiker."
-
-#: options/panel4.php:56
-msgid "Subject of the notification email. Allowed tag: [post_title]"
-msgstr "Onderwerp van de notificatie e-mail. Beschikbare tags: [post_title]"
-
-#: options/panel4.php:67
-msgid "Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
-msgstr "Inhoud van de notificatie e-mail. Beschikbare tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
-
-#: options/panel4.php:72
-msgid "Subject of the confirmation email. Allowed tag: [post_title]"
-msgstr "Onderwerp van bevestigings e-mail. Beschikbare tag: [post_title]"
-
-#: options/panel4.php:83
-msgid "Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
-msgstr "Inhoud van bevestigings e-mail. Beschikbare tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
-
+#: options/panel4.php:19
 #: options/panel4.php:88
-msgid "Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]"
-msgstr "Onderwerp van de e-mail die gebruikers ontvangen met de persoonlijk link naar hun beheerpagina. Beschikbare tags: [blog_name]"
+msgid "Management subject"
+msgstr "Ämnesfält administration"
 
-#: options/panel4.php:99
+#: options/panel4.php:20
+#: options/panel4.php:93
+msgid "Management message"
+msgstr "Administrationsmeddelande"
+
+#: options/panel4.php:42
+msgid "Name to use for the \"from\" field when sending a new notification to the user."
+msgstr "Namn att använda i \"från\" fältet när ett meddelande skickas till avändaren."
+
+#: options/panel4.php:47
+msgid "Email address to use for the \"from\" field when sending a new notification to the user."
+msgstr "E-postadress att använda i \"från\" fältet när ett meddelande skickas till avändaren."
+
+#: options/panel4.php:58
+msgid "Subject of the notification email. Allowed tag: [post_title]"
+msgstr "Ämnesfält för administrationsmeddelandet. Tillåtna taggar: [post_title]"
+
+#: options/panel4.php:69
+msgid "Content of the notification email. Allowed tags: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
+msgstr "Innehåll i administrationsmeddelandet. Tillåtna taggar: [post_title], [comment_permalink], [comment_author], [comment_content], [post_permalink], [manager_link]"
+
+#: options/panel4.php:74
+msgid "Subject of the confirmation email. Allowed tag: [post_title]"
+msgstr "Ämnesfält för bekräftelsemeddelandet. Tillåtna taggar: [post_title]"
+
+#: options/panel4.php:85
+msgid "Content of the confirmation email. Allowed tags: [post_permalink], [confirm_link], [post_title], [manager_link]"
+msgstr "Innehåll i bekräftelsemeddelandet. Tillåtna taggar: [post_permalink], [confirm_link], [post_title], [manager_link]"
+
+#: options/panel4.php:90
+msgid "Subject of the mail sent to those who request to access their management page. Allowed tag: [blog_name]"
+msgstr "Ämnesfält för meddelandet som skickas till de som begärt att få tillträdelse till sin administrationssida. Tillåtna taggar: [blog_name]"
+
+#: options/panel4.php:101
 msgid "Content of the management email. Allowed tags: [blog_name], [manager_link]"
-msgstr "Inhoud van de beheer e-mail. Beschikbare tags: [blog_name], [manager_link]"
+msgstr "Innehåll i administrationsmeddelandet. Tillåtna taggar:  [blog_name], [manager_link]"
 
 #: options/panel5.php:11
 #: options/panel5.php:35
 msgid "Autopurge requests"
-msgstr "Automatisch verwerpen van aanvragen"
+msgstr "Autorensa obekräftade"
 
 #: options/panel5.php:12
 #: options/panel5.php:40
 msgid "Enable double check"
-msgstr "Dubbele check activeren"
+msgstr "Aktivera dubbelkoll"
 
 #: options/panel5.php:13
-msgid "Notify authors"
-msgstr "Auteurs notificatie"
+#: options/panel5.php:47
+msgid "Subscribe authors"
+msgstr "Prenumeration författare"
 
 #: options/panel5.php:14
 #: options/panel5.php:54
 msgid "Enable HTML emails"
-msgstr "Activeer HTML in e-mails"
+msgstr "Aktivera HTML-e-post"
 
 #: options/panel5.php:15
 msgid "Send trackbacks"
-msgstr "Verstuur trackbacks"
+msgstr "Skicka trackbacks"
 
 #: options/panel5.php:16
-#: options/panel5.php:47
 msgid "Notify admin"
-msgstr "Notificeer beheerder"
+msgstr "Meddela administratör"
 
 #: options/panel5.php:17
 #: options/panel5.php:75
 msgid "Let admin subscribe"
-msgstr "Laat beheerder abonneren"
+msgstr "Låt administratör prenumerera"
 
 #: options/panel5.php:36
 msgid "days"
-msgstr "dagen"
+msgstr "dagar"
 
 #: options/panel5.php:37
 msgid "Delete pending subscriptions (not confirmed) after X days. Zero disables this feature."
-msgstr "Op <a href='[manager_link]'>deze pagina</a> kun je de abonnementen van dit bericht beheren."
+msgstr "Radera obekräftade prenumerationer efter X dagar. 0 inaktiverar denna tjänst."
 
 #: options/panel5.php:44
 msgid "Send a notification email to confirm the subscription (to avoid addresses misuse)."
-msgstr "Op <a href='[manager_link]'>deze pagina</a> kun je de abonnementen van dit bericht beheren."
+msgstr "Skicka administrationsmeddelande för att bekräfta prenumeration (för att undvika missbruk)."
 
 #: options/panel5.php:51
-msgid "Notify the administrator when a new comment is posted."
-msgstr "Stel de beheerder op de hoogte als er nieuwe reacties worden geplaatst."
+msgid "Automatically subscribe authors to their own articles (not retroactive)."
+msgstr "Låt författare automatiskt prenumerera på sina egna artiklar (ej retroaktivt)."
 
 #: options/panel5.php:58
 msgid "If enabled, will send email messages with content-type = text/html instead of text/plain"
-msgstr "Als dit aan staat dan zullen emails verstuurd worden met content-type text/html in plaats van text/plain."
+msgstr "Om aktiverat skickar detta alternativ ut e-postmeddelanden med innehållet = text/html istället för text/plain."
 
 #: options/panel5.php:61
-#, fuzzy
 msgid "Process trackbacks"
-msgstr "Verstuur trackbacks"
+msgstr "Bearbeta trackbacks"
 
 #: options/panel5.php:65
 msgid "Notify users when a new trackback or pingback is added to the discussion."
-msgstr "Stel de gebruikers op de hoogte als er nieuwe trackbacks of pingbacks bij een bericht geplaatst worden."
+msgstr "Meddela användare när en trackback eller pingback läggs till i diskussionen."
 
 #: options/panel5.php:68
 msgid "Track all subscriptions"
-msgstr "Bekijk alle abonnementen"
+msgstr "Spåra alla prenumerationer"
 
 #: options/panel5.php:72
 msgid "Notify the administrator when users subscribe without commenting."
-msgstr "Stel beheerders op de hoogte als iemand een abonnement neemt zonder eerst zelf te reageren."
+msgstr "Meddela administratör när användare prenumererar utan att kommentera."
 
 #: options/panel5.php:79
 msgid "Let the administrator subscribe to comments when logged in."
-msgstr "Moet de beheerder zich kunnen abonneren op berichten als deze is ingelogd?"
+msgstr "Låt administratör prenumerera på kommentarer även när inloggad."
 
 #: options/panel6.php:8
 msgid "Support the author"
-msgstr "Help de auteur"
+msgstr "Stöd författaren"
 
 #: options/panel6.php:16
 msgid "How valuable is the feature offered by this plugin to your visitors? Subscribe to Comments Reloaded is and will always be free, but consider supporting the author if this plugin made your web site better, especially if you are making money out of it. Any donation received will be reinvested in the development of Subscribe to Comments Reloaded, and to buy some food for my hungry family."
-msgstr "Hoe belangrijk is deze plugin voor jou en je gebruikers? Subscribe to Comments Reloaded is gratis en zal altijd gratis blijven, maar denk er eens over na om de auteur van deze plugin te helpen als deze plugin je echt bevalt en het jou website beter maakt, of als je er geld mee verdiend. Elke donatie zal in de plugin geïnvesteerd worden, in de ontwikkeling ervan en om er eten van te kopen voor mijn hongerige gezin."
+msgstr "Hur värdefull är tjänsten som detta tillägg erbjuder dina besökare? Att prenumerera på Comments Reloaded är och kommer alltid vara gratis, men fundera gärna på att stödja författaren om detta tillägg gjorde din sida bättre. Speciellt om du tjänar pengar på det. Alla donationer går till att förbättra Subscribe to Comments Reloaded, och att föda min hungriga familj."
 
 #: options/panel6.php:18
 msgid "Don't want to donate? You can still help"
-msgstr "Wil je niet doneren? Je kunt toch helpen"
+msgstr "Vill eller kan du inte donera? Du kan fortfarande hjälpa"
 
 #: options/panel6.php:19
 msgid "If you don't want to donate money, please consider blogging about my plugin with a link to the plugin's page. Please let your readers know what makes your blog better. You can also contribute donating your time: do not hesitate to send me bug reports, your localization files, ideas on how to improve Subscribe to Comments Reloaded and so on. Whatever you do, thanks for using my plugin!"
-msgstr "Wil je geen geld doneren maar toch helpen? Denk er dan eens over om over mijn plugin te bloggen. Laat de lezers van je blog weten waarom deze plugin je blog beter maakt. Je kunt mij ook helpen door middel van het melden van bugs, het helpen van vertalen of door middel van het toesturen van ideeen om Subscribe to Commentes Reloaded nog beter te maken. Wat je ook doet, in ieder geval bedankt voor het gebruiken van mijn plugin!"
+msgstr "Om du inte vill donera pengar var snäll och berätta om mitt tillägg (plugin) med en länk till tilläggets sida. Låt gärna dina läsare veta vad som gör din blogg bättre. Du kan också hjälpa till genom att donera din tid: tveka inte att skicka mig dina felrapporter, översättningsfiler, idéer om hur Subscribe to Comments kan förbättras, med mera. Oavsett vad du gör, tack för att du använder mitt tillägg!"
 
 #: options/panel6.php:21
 msgid "Vote and show your appreciation"
-msgstr "Ondersteun ons door te stemmen"
+msgstr "Rösta och visa din uppskattning"
 
 #: options/panel6.php:22
 msgid "Tell other people if Subscribe to Comments Reloaded works for you and how good it is. <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/\">Rate it</a> on its Plugin Directory page."
-msgstr "Vertel anderen dat jij Subscribe to Comments Reloaded gebruikt en hoe goed jij het vindt. <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/\">Stem hier</a> op onze plugin in de WordPress Plugin Directory."
+msgstr "Berätta för andra om Subscribe to Comments Reloaded fungerar för dig och hur bra det är.  <a href=\"http://wordpress.org/extend/plugins/subscribe-to-comments-reloaded/\">Betygsätt det</a> på dess sida på Plugin Directory."
 
 #: options/panel6.php:24
 msgid "Sponsor's Corner"
-msgstr ""
+msgstr "Sponsorhörnet"
 
 #: options/panel6.php:25
 msgid "If you want to sponsor this plugin, don't hesitate to <a href='http://www.duechiacchiere.it/contatto'>contact me</a>."
-msgstr ""
+msgstr "Om du vill sponsra detta tillägg (plugin), tevka inte att <a href='http://www.duechiacchiere.it/contatto'>kontakta mig</a>."
 
 #: templates/author.php:55
 msgid "Title"
@@ -995,138 +948,123 @@ msgstr "Titel"
 #: templates/author.php:66
 #: templates/user.php:60
 msgid "Select all"
-msgstr "Selecteer alles"
+msgstr "Välj alla"
 
 #: templates/author.php:67
 #: templates/user.php:61
 msgid "Invert selection"
-msgstr "Selectie omkeren"
+msgstr "Invertera val"
 
 #: templates/author.php:71
 msgid "Set to Y"
-msgstr "Verander naar Y"
+msgstr "Sätt till Y"
 
 #: templates/author.php:77
 #: templates/user.php:71
 msgid "No subscriptions match your search criteria."
-msgstr "Geen abonnementen voldoen aan je zoekcriteria."
+msgstr "Inga prenumerationer matchar dina sökkriteria."
 
-#: templates/request-management-link.php:68
-#: templates/subscribe.php:89
+#: templates/request-management-link.php:67
+#: templates/subscribe.php:87
 msgid "Send"
-msgstr "Verstuur"
+msgstr "Skicka"
+
+#: templates/subscribe.php:41
+#: templates/subscribe.php:42
+msgid "New subscription to"
+msgstr "Ny prenumeration på"
 
 #: templates/subscribe.php:42
-#: templates/subscribe.php:43
-msgid "New subscription to"
-msgstr "Nieuw abonnement voor"
-
-#: templates/subscribe.php:43
 msgid "User:"
-msgstr "Gebruiker:"
+msgstr "Användare:"
+
+#~ msgid "Replies"
+#~ msgstr "Svar"
+
+#~ msgid "Digest"
+#~ msgstr "Sammanfattning"
+
+#~ msgid "Pending"
+#~ msgstr "Behandlas"
+
+#~ msgid "Notify authors"
+#~ msgstr "Meddela författare"
+
+#~ msgid "Notify the administrator when a new comment is posted."
+#~ msgstr "Meddela administratör varje gång en kommentar läggs in."
 
 #~ msgid "Management Page ID"
-#~ msgstr "Abonnenementen Beheerpagina ID"
+#~ msgstr "ID for administrasjonsside"
 
 #~ msgid "Management page"
-#~ msgstr "Beheerpagina"
+#~ msgstr "Administrasjonsside"
 
 #~ msgid "Awaiting confirmation"
-#~ msgstr "Wachten op bevestiging"
+#~ msgstr "Venter på bekreftelse"
 
 #~ msgid "Stats"
-#~ msgstr "Statistieken"
+#~ msgstr "Statistikk"
 
 #~ msgid "Other Messages"
-#~ msgstr "Andere Berichten"
+#~ msgstr "Andre meldinger"
 
 #~ msgid "Support"
-#~ msgstr "Ondersteuning"
+#~ msgstr "Support"
 
 #~ msgid "The status has been successfully updated. Rows affected:"
-#~ msgstr "De status is succesvol bijgewerkt. Aangepaste rijen:"
-
-#~ msgid ""
-#~ "Update the email address associated to a specific subscription (by post "
-#~ "ID)."
-#~ msgstr ""
-#~ "E-mail adres aanpassen die bij een specifiek abonnement hoort (door "
-#~ "middel van Post ID)"
-
-#~ msgid "PID"
-#~ msgstr "PID"
-
-#~ msgid "Change status"
-#~ msgstr "Status aanpassen"
+#~ msgstr "Statusen har blitt vellykket oppdatert. Rader affisert:"
 
 #~ msgid ""
 #~ "Change the status of an email address or permanently delete all its "
 #~ "subscriptions."
 #~ msgstr ""
-#~ "Verander de status van een e-mail adres of verwijder alle bijbehorende "
-#~ "abonnementen."
+#~ "Endre statusen til en e-postadresse eller permanent slette alle "
+#~ "tilknyttede abonnement."
 
 #~ msgid "Resume"
-#~ msgstr "Hervatten"
+#~ msgstr "Reaktiver"
 
 #~ msgid "Update email address"
-#~ msgstr "E-mail adres bijwerken"
+#~ msgstr "Oppdater e-postadresse"
 
 #~ msgid ""
 #~ "You can \"mass update\" all the occurrences of a given email address "
 #~ "(exact matches only)."
 #~ msgstr ""
-#~ "Hieronder kun je een geabonneerd e-mail adres veranderen (Let goed op "
-#~ "schrijffouten)."
+#~ "Du kan \"masseoppdatere\" alle forekomstene av en gitt e-postadresse (kun "
+#~ "eksakte treff)."
 
 #~ msgid "Search email address"
-#~ msgstr "Zoek e-mail adres"
+#~ msgstr "Søk etter e-postadresse"
 
 #~ msgid "Legend: Y: subscribed, N: suspended, C: awaiting confirmation"
-#~ msgstr "Legenda: Y: geabonneerd, N: gepauzeerd, C: wachten op bevestiging"
+#~ msgstr ""
+#~ "Forklaring: Y = aktivt abonnement, N = deaktivert, C = venter på "
+#~ "bekreftelse"
 
 #~ msgid "Custom CSS Class"
-#~ msgstr "Aangepaste CSS Class"
+#~ msgstr "Egendefinert CSS-klasse"
 
 #~ msgid ""
 #~ "Custom CSS class to associate to the checkbox, if you want to customize "
 #~ "its style."
 #~ msgstr ""
-#~ "Aangepaste CSS stijlen die op de checkbox slaan, vink aan als je de stijl "
-#~ "zelf wilt aanpassen."
+#~ "Egendefinert CSS-klasse å bruke på avkrysningsboksen, dersom du ønsker å "
+#~ "egendefinere dens utseende."
 
+#, fuzzy
 #~ msgid "StCR table has been successfully optimized."
-#~ msgstr "StCR tabel is succesvol geoptimaliseerd."
-
-#~ msgid "Database"
-#~ msgstr "Database"
-
-#~ msgid "Engine"
-#~ msgstr "Structuur"
-
-#~ msgid "Records"
-#~ msgstr "Records"
-
-#~ msgid "Average Record Length"
-#~ msgstr "Gemiddelde Record Lengte"
-
-#~ msgid "Created on"
-#~ msgstr "Aangemaakt op"
-
-#~ msgid "Approximate Overhead"
-#~ msgstr "Gemiddelde Overhead"
-
-#~ msgid "optimize"
-#~ msgstr "optimaliseren"
+#~ msgstr "Statusen har blitt vellykket oppdatert."
 
 #~ msgid "Subscriptions have been successfully updated."
-#~ msgstr "Abonnementen zijn succesvol bijgewerkt."
+#~ msgstr "Abonnementene er blitt vellykket oppdatert."
 
 #~ msgid "Sorry, no subscriptions found."
-#~ msgstr "Sorry, er zijn geen abonnementen gevonden."
+#~ msgstr "Beklager, ingen abonnement funnet."
 
+#, fuzzy
 #~ msgid "All the subscriptions have been successfully updated."
-#~ msgstr "Alle abonnementen zijn succesvol bijgewerkt."
+#~ msgstr "Abonnementene er blitt vellykket oppdatert."
 
 #~ msgid "Remove or suspend email address"
-#~ msgstr "Verwijder of pauzeer e-mail adres"
+#~ msgstr "Fjerne eller midlertidig deaktivere varsling til en e-postadresse"

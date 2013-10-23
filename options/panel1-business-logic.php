@@ -12,7 +12,7 @@ switch ($action){
 		$status = !empty($_POST['srs'])?$_POST['srs']:(!empty($_GET['srs'])?$_GET['srs']:'');
 
 		$wp_subscribe_reloaded->add_subscription($post_id, $email, $status);
-		if ($status == 'YC')
+		if (strpos($status, 'C') !== false)
 			$wp_subscribe_reloaded->confirmation_email($post_id, $email);
 		
 		echo '<div class="updated"><p>'.__('Subscription added.', 'subscribe-reloaded').'</p></div>';
@@ -91,9 +91,9 @@ $ending_to = min($count_total, $offset+$limit_results);
 $previous_link = $next_link = '';
 if ($offset > 0){
 	$new_starting = ($offset > $limit_results)?$offset-$limit_results:0;
-	$previous_link = "<a href='options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&amp;subscribepanel=1&amp;srsf=$new_starting&amp;srrp=$limit_results&amp;srv=$search_value&amp;srt=".urlencode($search_type)."&amp;srob=$order_by&amp;sro=$order'>".__('&laquo; Previous','subscribe-reloaded')."</a> ";
+	$previous_link = "<a href='options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&amp;subscribepanel=1&amp;srf=$search_field&amp;srt=".urlencode($operator)."&amp;srv=$search_value&amp;srob=$order_by&amp;sro=$order&amp;srsf=$new_starting&amp;srrp=$limit_results'>".__('&laquo; Previous','subscribe-reloaded')."</a> ";
 }
 if (($ending_to < $count_total) && ($count_results > 0)){
 	$new_starting = $offset+$limit_results;
-	$next_link = "<a href='options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&amp;subscribepanel=1&amp;srsf=$new_starting&amp;srrp=$limit_results&amp;srv=$search_value&amp;srt=".urlencode($search_type)."&amp;srob=$order_by&amp;sro=$order'>".__('Next &raquo;','subscribe-reloaded')."</a> ";
+	$next_link = "<a href='options-general.php?page=send-email-only-on-reply-to-my-comment/options/index.php&amp;subscribepanel=1&amp;srf=$search_field&amp;srt=".urlencode($operator)."&amp;srv=$search_value&amp;srob=$order_by&amp;sro=$order&amp;srsf=$new_starting&amp;srrp=$limit_results'>".__('Next &raquo;','subscribe-reloaded')."</a> ";
 }
