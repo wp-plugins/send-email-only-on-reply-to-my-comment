@@ -2,8 +2,8 @@
 Contributors: Yasir
 Tags: email, notification, original commenter, subscribe, comments, notification, subscription, manage, follow, commenting
 Requires at least: 2.9.2
-Tested up to: 3.6.1
-Stable tag: 0.7
+Tested up to: 3.7
+Stable tag: 0.8
 
 Send email only on Reply to My Comment: will give users the option to receive email alert only when someone replies to their comment.
 
@@ -12,7 +12,9 @@ Send email only on Reply to My Comment: is a simple plugin that will give your s
 
 You can find more information here: http://elance360.com/wordpress-plugin/
 
-NOTE: In the latest update, many new features have been added.
+In the latest update, many new features have been added.
+
+For this plugin to work, you will need to enable Threaded/Nested comments option.
 
 "Send email only on Reply to My Comment" is a Modified version of "Subscribe To Comments Reloaded". I have modified this plugin so that email notifications are NOT sent to all subscribers, instead only one notification is sent to the Original Poster [if he has selected to receive notifications].
 
@@ -20,6 +22,7 @@ NOTE: In the latest update, many new features have been added.
 * Wordpress 2.9.2 or higher
 * PHP 5.1 or higher
 * MySQL 5.x or higher
+* Threaded/Nested comments option Enabled
 
 ## Main Features
 * Does not send emails to all subscribers.
