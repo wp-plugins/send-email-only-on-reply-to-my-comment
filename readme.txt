@@ -1,9 +1,9 @@
 === Send email only on Reply to My Comment ===
 Contributors: Yasir
-Tags: comment notification, email notification, original poster, subscribe, comment, comments, notification, follow up comments
+Tags: comment notification, email notification, original poster, subscribe, comment, comments, notification, follow up comments, reply
 Requires at least: 2.9.2
-Tested up to: 3.7
-Stable tag: 0.8.1
+Tested up to: 3.7.1
+Stable tag: 0.8.2
 
 Send email only on Reply to My Comment: will give users the option to receive email alert only when someone replies to their comment.
 
@@ -46,6 +46,9 @@ No: You can only use one of these two plugins at the same time.
 2. Manage email messages
 
 == Changelog ==
+
+= 0.8.2 =
+* Fixed: Warnings that sometimes were shown after posting a comment. 
 
 = 0.7 =
 * Fixed: A lot of issues and have added many new features

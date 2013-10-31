@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 0.8.1
+Version: 0.8.2
 Plugin URI: http://elance360.com/wordpress-plugin/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
@@ -341,6 +341,7 @@ class wp_subscribe_reloaded{
 		}
 
 $one1="1";
+$child1="0";
 		// Send a notification to all the users subscribed to this post
 		if ($info->comment_approved == 1){
 			$subscriptions = $this->get_subscriptions(array('post_id', 'status'), array('equals', 'equals'), array($info->comment_post_ID, 'Y'));
@@ -348,12 +349,13 @@ $one1="1";
 				$subscriptions = array_merge($subscriptions, $this->get_subscriptions('parent', 'equals', $info->comment_parent));
 
 			$parent = mysql_query("SELECT `comment_parent` FROM `wp_comments` WHERE `comment_ID` = '$_comment_ID'");
+			if (!($parent==FALSE)){
 		$child1 = mysql_fetch_row($parent);
 		$child1 = $child1[0];
 					
 			$parent1 = mysql_query("SELECT `comment_author_email` FROM `wp_comments` WHERE `comment_ID` = '$child1'");
-		$child2 = mysql_fetch_row($parent1); 
-		$child2 = $child2[0];
+			$child2 = mysql_fetch_row($parent1); 
+		$child2 = $child2[0];}
 			if($child1!= '0' && $one1=='1' ){
 		$a_email= $child2;
 			
@@ -619,7 +621,7 @@ $one1="1";
 	 * Adds a new subscription
 	 */
 	public function add_subscription($_post_id = 0, $_email = '', $_status = 'Y'){
-		global $wpdb;
+		global $wpdb, $post_id;
 
 		// Does the post exist?
 		$target_post = get_post($post_id);
