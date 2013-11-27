@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 0.8.2
+Version: 0.8.3
 Plugin URI: http://elance360.com/wordpress-plugin/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
@@ -407,9 +407,33 @@ $child1="0";
 				if (!empty($info->comment_parent))
 					$subscriptions = array_merge($subscriptions, $this->get_subscriptions('parent', 'equals', $info->comment_parent));
 
-				foreach($subscriptions as $a_subscription)
-					if ($a_subscription->email != $info->comment_author_email) // Skip the user who posted this new comment
-						$this->notify_user($info->comment_post_ID, $a_subscription->email, $_comment_ID);
+				$one1="1";
+$child1="0";
+		
+
+			$parent = mysql_query("SELECT `comment_parent` FROM `wp_comments` WHERE `comment_ID` = '$_comment_ID'");
+			if (!($parent==FALSE)){
+		$child1 = mysql_fetch_row($parent);
+		$child1 = $child1[0];
+					
+			$parent1 = mysql_query("SELECT `comment_author_email` FROM `wp_comments` WHERE `comment_ID` = '$child1'");
+			$child2 = mysql_fetch_row($parent1); 
+		$child2 = $child2[0];}
+			if($child1!= '0' && $one1=='1' ){
+		$a_email= $child2;
+			
+			
+				if ($a_email != $info->comment_author_email && $this->is_user_subscribed($info->comment_post_ID, $child2))
+					$this->notify_user($info->comment_post_ID, $a_email, $_comment_ID);$one1="0";
+			}
+		
+		// If the case, notify the author
+		if (get_option('subscribe_reloaded_notify_authors', 'no') == 'yes')
+			$this->notify_user($info->comment_post_ID, get_bloginfo('admin_email'), $_comment_ID);
+
+		return $_comment_ID;
+		
+		
 				break;
 
 			case 'trash':
