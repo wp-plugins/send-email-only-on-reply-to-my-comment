@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 1.0.0
+Version: 1.0.1
 Plugin URI: http://elance360.com/wordpress-plugin/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
@@ -15,6 +15,11 @@ if (!function_exists('add_action')){
 }
 
 function run_at_activation(){
+	
+	    add_option('subscribe_reloaded_dropdown_label', __("Do Not Send Email Notifications.",'subscribe-reloaded'), '', 'no');
+        add_option('subscribe_reloaded_dropdown_label1', __("Send Email Notification ONLY If Someone Replies To My Comment(s).",'subscribe-reloaded'), '', 'no');
+        add_option('subscribe_reloaded_dropdown_label2', __("Send Email Notification Whenever A New Comment Is Posted.",'subscribe-reloaded'), '', 'no');
+        add_option('subscribe_reloaded_show_subscription_box1', 'yes', '', 'no');
 	
 	global $wpdb;
 	$checkalready_first_comment = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `meta_key` = '_stt@_notsend_dup'");
@@ -45,7 +50,7 @@ function run_at_activation(){
 		}
 	}
 	
-		if (get_option('subscribe_reloaded_enable_advanced_subscriptions', 'no') == 'no'){
+		if (get_option('subscribe_reloaded_enable_advanced_subscriptions', 'yes') == 'no'){
 						global $wpdb;
 						
 						$wpdb->update( 
@@ -165,6 +170,7 @@ function run_at_activation(){
 			
 }
 register_activation_hook( __FILE__, 'run_at_activation' );
+add_action( 'admin_init', 'run_at_activation');
 
 /**
  * Displays the checkbox to allow visitors to subscribe

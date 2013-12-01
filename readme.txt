@@ -3,7 +3,7 @@ Contributors: Yasir
 Tags: comment notification, email notification, original poster, subscribe, comment, comments, notification, follow up comments, reply
 Requires at least: 2.9.2
 Tested up to: 3.7.1
-Stable tag: 1.0.0
+Stable tag: 1.0.1
 
 Users can choose to “Receive Comment Reply Notification Only” or “Receive Notification For All New Comments” or “Not Receive Any Notifications”
 
@@ -31,12 +31,13 @@ For this plugin to work, you will need to enable Threaded/Nested comments option
 * Threaded/Nested comments option Enabled
 
 ## Main Features
-* Users have three options to choose from: 1. Do Not Send Email Notifications, 2. Send Email Notification ONLY If Someone Replies To My Comment(s), 3. Send Email Notification Whenever A Comment Is Posted.
+* Does not send emails to all subscribers.
 * Very Simple to use
+* Email will only be sent if a person chooses to get notification and if the new commenter has pressed the Reply Button on his comment.
 
 == Installation ==
 
-1. If you are using 'Subscribe To Comments by Mark Jaquith' or 'Subscribe To Comments Reloaded by camu', delete them
+1. If you are using 'Subscribe To Comments by Mark Jaquith' or 'Subscribe To Comments Reloaded by camu', disable them
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
 
@@ -47,7 +48,7 @@ No: You can only use one of these two plugins at the same time.
 
 == Screenshots ==
 
-1. Options
+1. Manage visitor messages
 2. Manage email messages
 
 == Changelog ==
