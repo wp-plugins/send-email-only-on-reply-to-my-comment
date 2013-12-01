@@ -17,7 +17,8 @@ if (!function_exists('is_admin') || !is_admin()){
 <p class="liquid"><label for='srs'><?php _e('Status','subscribe-reloaded') ?></label>
 	<select name="srs" id="srs">
 		<option value=''><?php _e('Keep unchanged','subscribe-reloaded') ?></option>
-		<option value='Y'><?php _e('Active','subscribe-reloaded') ?></option>
+		<option value='Y'><?php _e('Receive Comment Reply Notification Only','subscribe-reloaded') ?></option>
+		<option value='R'><?php _e('Receive Notification For All New Comments','subscribe-reloaded') ?></option>
 		<option value='C'><?php _e('Suspended','subscribe-reloaded') ?></option>
 	</select> <input type='submit' class='subscribe-form-button' value='<?php _e('Update','subscribe-reloaded') ?>' /></p>
 <input type='hidden' name='sra' value='edit'/>

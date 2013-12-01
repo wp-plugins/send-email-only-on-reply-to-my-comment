@@ -33,6 +33,8 @@ function subscribe_reloaded_update_option( $_option = '', $_value = '', $_type =
 	return false;
 }
 
+
+
 function subscribe_reloaded_get_option($_option = '', $_default = ''){
 	$value = get_option('subscribe_reloaded_'.$_option, $_default);
 	return stripslashes($value);
@@ -44,10 +46,10 @@ load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on
 // Define the panels
 $array_panels = array(
 	__('Manage subscriptions','subscribe-reloaded'),
-	__('Comment Form','subscribe-reloaded'),
+	__('Comment Form Options','subscribe-reloaded'),
 	__('Management Page','subscribe-reloaded'),
 	__('Notifications','subscribe-reloaded'),
-	__('Options','subscribe-reloaded'),
+	
 	
 );
 

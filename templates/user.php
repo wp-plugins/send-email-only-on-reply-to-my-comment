@@ -26,7 +26,7 @@ if (!empty($_POST['post_list'])){
 			echo '<p class="updated">'.__('Subscriptions suspended:', 'subscribe-reloaded')." $rows_affected</p>";
 			break;
 		case 'activate':
-			$rows_affected = $wp_subscribe_reloaded->update_subscription_status($post_list, $email, '-C');
+			$rows_affected = $wp_subscribe_reloaded->update_subscription_status($post_list, $email, 'Y');
 			echo '<p class="updated">'.__('Subscriptions activated:', 'subscribe-reloaded')." $rows_affected</p>";
 			break;
 		case 'force_r':
@@ -59,8 +59,10 @@ echo "<p>$message</p>";
 		echo '<p id="subscribe-reloaded-select-all-p"><a class="subscribe-reloaded-small-button" href="#" onclick="t=document.forms[\'post_list_form\'].elements[\'post_list[]\'];c=t.length;if(!c){t.checked=true}else{for(var i=0;i<c;i++){t[i].checked=true}};return false;">'.__('Select all','subscribe-reloaded').'</a> ';
 		echo '<a class="subscribe-reloaded-small-button" href="#" onclick="t=document.forms[\'post_list_form\'].elements[\'post_list[]\'];c=t.length;if(!c){t.checked=!t.checked}else{for(var i=0;i<c;i++){t[i].checked=false}};return false;">'.__('Invert selection','subscribe-reloaded').'</a></p>';
 		echo '<p id="subscribe-reloaded-action-p">'.__('Action:','subscribe-reloaded').'
-			<input type="radio" name="sra" value="delete" id="action_type_delete" checked="checked"/> <label for="action_type_delete">'.__('Delete','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; 
-			</p>';
+			<input type="radio" name="sra" value="delete" id="action_type_delete" /> <label for="action_type_delete">'.__('Delete','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; 
+			<input type="radio" name="sra" value="suspend" id="action_type_suspend" checked="checked" /> <label for="action_type_suspend">'.__('Suspend','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="sra" value="force_r" id="action_type_force_y" /> <label for="action_type_force_y">'.__('Receive Notification For All New Comments','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="sra" value="activate" id="action_type_activate" /> <label for="action_type_activate">'.__('Receive Comment Reply Notification Only','subscribe-reloaded').'</label></p>';
 		echo '<p id="subscribe-reloaded-update-p"><input type="submit" class="subscribe-form-button" value="'.__('Update subscriptions','subscribe-reloaded').'" /><input type="hidden" name="sre" value="'.urlencode($email).'"/></p>';
 		
 	}

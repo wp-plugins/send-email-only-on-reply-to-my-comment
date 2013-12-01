@@ -67,7 +67,10 @@ echo "<p>$message</p>";
 		echo '<a class="subscribe-reloaded-small-button" href="#" onclick="t=document.forms[\'email_list_form\'].elements[\'email_list[]\'];c=t.length;if(!c){t.checked=!t.checked}else{for(var i=0;i<c;i++){t[i].checked=false}};return false;">'.__('Invert selection','subscribe-reloaded').'</a></p>';
 		echo '<p id="subscribe-reloaded-action-p">'.__('Action:','subscribe-reloaded').'
 			<input type="radio" name="sra" value="delete" id="action_type_delete" /> <label for="action_type_delete">'.__('Delete','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp; 
-			</p>';
+			<input type="radio" name="sra" value="suspend" id="action_type_suspend" checked="checked" /> <label for="action_type_suspend">'.__('Suspend','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="sra" value="force_r" id="action_type_force_r" /> <label for="action_type_force_y">'.__('Receive Notification For All New Comments','subscribe-reloaded').'</label> &nbsp;&nbsp;&nbsp;&nbsp;
+			<input type="radio" name="sra" value="force_y" id="action_type_force_y" /> <label for="action_type_activate">'.__('Receive Comment Reply Notification Only','subscribe-reloaded').'</label></p>';
+		echo '<p id="subscribe-reloaded-update-p"><input type="submit" class="subscribe-form-button" value="'.__('Update subscriptions','subscribe-reloaded').'" /><input type="hidden" name="srp" value="'.intval($post_ID).'"/></p>';
 		
 	}
 	else{

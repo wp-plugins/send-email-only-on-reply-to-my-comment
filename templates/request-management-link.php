@@ -54,9 +54,10 @@ if (!empty($email)){
 		$message = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($message);
 	}
 	else
-		$message = str_replace('[post_title]', $post->post_title, $message);
+	
 
 	echo $message;
+	
 } else {
 	$message = html_entity_decode(stripslashes(get_option('subscribe_reloaded_request_mgmt_link')), ENT_COMPAT, 'UTF-8');
 	if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage'))

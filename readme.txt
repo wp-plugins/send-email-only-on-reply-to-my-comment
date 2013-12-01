@@ -3,16 +3,22 @@ Contributors: Yasir
 Tags: comment notification, email notification, original poster, subscribe, comment, comments, notification, follow up comments, reply
 Requires at least: 2.9.2
 Tested up to: 3.7.1
-Stable tag: 0.8.3
+Stable tag: 1.0.0
 
-Send email only on Reply to My Comment: will give users the option to receive email alert only when someone replies to their comment.
+Users can choose to “Receive Comment Reply Notification Only” or “Receive Notification For All New Comments” or “Not Receive Any Notifications”
 
 == Description ==
-Send email only on Reply to My Comment: is a simple plugin that will give your site visitors the option to receive email notification if someone replies to their comment. But the email will only be sent to one person, that is, the original commenter to whom the new user is replying.
+UPDATE: Users now have three options to choose from:
+
+1. Do Not Send Email Notifications.
+
+2. Send Email Notification ONLY If Someone Replies To My Comment(s).
+
+3. Send Email Notification Whenever A Comment Is Posted.
+
+If a user chooses the second option, then email notification will only be sent to him when someone reply to his/her comment by clicking on Reply button below the comment.
 
 You can find more information here: http://elance360.com/wordpress-plugin/
-
-In the latest update, many new features have been added.
 
 For this plugin to work, you will need to enable Threaded/Nested comments option.
 
@@ -25,13 +31,12 @@ For this plugin to work, you will need to enable Threaded/Nested comments option
 * Threaded/Nested comments option Enabled
 
 ## Main Features
-* Does not send emails to all subscribers.
+* Users have three options to choose from: 1. Do Not Send Email Notifications, 2. Send Email Notification ONLY If Someone Replies To My Comment(s), 3. Send Email Notification Whenever A Comment Is Posted.
 * Very Simple to use
-* Email will only be sent if a person chooses to get notification and if the new commenter has pressed the Reply Button on his comment.
 
 == Installation ==
 
-1. If you are using 'Subscribe To Comments by Mark Jaquith' or 'Subscribe To Comments Reloaded by camu', disable them
+1. If you are using 'Subscribe To Comments by Mark Jaquith' or 'Subscribe To Comments Reloaded by camu', delete them
 2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
 3. Activate it
 
@@ -42,7 +47,7 @@ No: You can only use one of these two plugins at the same time.
 
 == Screenshots ==
 
-1. Manage visitor messages
+1. Options
 2. Manage email messages
 
 == Changelog ==
