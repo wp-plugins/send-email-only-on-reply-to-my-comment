@@ -3,9 +3,9 @@ Contributors: Yasir
 Tags: comment notification, email notification, original poster, subscribe, comment, comments, notification, follow up comments, reply
 Requires at least: 2.9.2
 Tested up to: 3.7.1
-Stable tag: 1.0.2
+Stable tag: 1.0.3
 
-Users can choose to “Receive Comment Reply Notification Only” or “Receive Notification For All New Comments” or “Not Receive Any Notifications”
+Users can choose to :Receive Comment Reply Notification Only: or :Receive Notification For All New Comments: or :Not Receive Any Notifications:
 
 == Description ==
 UPDATE: Users now have three options to choose from:
@@ -22,7 +22,7 @@ You can find more information here: http://elance360.com/wordpress-plugin/
 
 For this plugin to work, you will need to enable Threaded/Nested comments option.
 
-"Send email only on Reply to My Comment" is a Modified version of "Subscribe To Comments Reloaded". I have modified this plugin so that email notifications are NOT sent to all subscribers, instead only one notification is sent to the Original Poster [if he has selected to receive notifications].
+:Send email only on Reply to My Comment: is a Modified version of this plugin :Subscribe To Comments Reloaded:
 
 ## Requirements
 * Wordpress 2.9.2 or higher
@@ -37,13 +37,13 @@ For this plugin to work, you will need to enable Threaded/Nested comments option
 
 == Installation ==
 
-1. If you are using 'Subscribe To Comments by Mark Jaquith' or 'Subscribe To Comments Reloaded by camu', disable them
-2. Upload the entire folder and all the subfolders to your Wordpress plugins' folder
+1. If you are using :Subscribe To Comments by Mark Jaquith: or :Subscribe To Comments Reloaded by camu: disable them
+2. Upload the entire folder and all the subfolders to your Wordpress plugins folder
 3. Activate it
 
 == Frequently Asked Questions ==
 
-= Can I use this plugin along with this plugin "subscribe-to-comments-reloaded"? =
+= Can I use this plugin along with this plugin :subscribe-to-comments-reloaded:
 No: You can only use one of these two plugins at the same time.
 
 == Screenshots ==
@@ -63,13 +63,13 @@ No: You can only use one of these two plugins at the same time.
 * Fixed: A bug reported by a user
 
 = 0.4 =
-* Fixed: Another bug reported by "Weiching"
+* Fixed: Another bug reported by :Weiching:
 
 == Language Localization ==
 
-"Send email only on Reply to My Comment" is a Modified version of "Subscribe To Comments Reloaded". I have modified this plugin so that email notifications are NOT sent to all subscribers, instead only one notification is sent to the Original Poster [if he has selected to receive notifications].
+:Send email only on Reply to My Comment: is a Modified version of :Subscribe To Comments Reloaded: I have modified this plugin so that email notifications are NOT sent to all subscribers, instead only one notification is sent to the Original Poster :if he has selected to receive notifications:.
 
-"Subscribe To Comments Reloaded" supports different languages. There is a langs directory containing .mo and .po files. If you want to use another language, then you will need to search and find how plugin language can be changed. I cannot provide any support in this regard.
+:Subscribe To Comments Reloaded: supports different languages. There is a langs directory containing .mo and .po files. If you want to use another language, then you will need to search and find how plugin language can be changed. I cannot provide any support in this regard.
 Supported languages.
 
 * Danish
