@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 1.0.3
+Version: 1.0.4
 Plugin URI: http://elance360.com/wordpress-plugin/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
@@ -15,161 +15,50 @@ if (!function_exists('add_action')){
 }
 
 function run_at_activation(){
-	
 	    add_option('subscribe_reloaded_dropdown_label', __("Do Not Send Email Notifications.",'subscribe-reloaded'), '', 'no');
         add_option('subscribe_reloaded_dropdown_label1', __("Send Email Notification ONLY If Someone Replies To My Comment(s).",'subscribe-reloaded'), '', 'no');
         add_option('subscribe_reloaded_dropdown_label2', __("Send Email Notification Whenever A New Comment Is Posted.",'subscribe-reloaded'), '', 'no');
         add_option('subscribe_reloaded_show_subscription_box1', 'yes', '', 'no');
 		add_option('subscribe_reloaded_show_subscription_box', 'yes', '', 'no');
-	
+		add_option('subscribe_reloaded_sub_options', 'op1', '', 'no');
 	global $wpdb;
 	$checkalready_first_comment = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `meta_key` = '_stt@_notsend_dup'");
 	if(!($checkalready_first_comment)){
-		
 		global $wpdb;
 		$get_last_comment =	$wpdb->get_var("SELECT `comment_ID` FROM `wp_comments` WHERE `comment_approved` = '1' ORDER BY `comment_ID` DESC");
-		
 		if ($get_last_comment != null){
-		
 		$a_p = "1";
 		$a_K = "_stt@_notsend_dup";
-		
-		
-		
-	
-					global $wpdb;
-					 $wpdb->insert('wp_postmeta', array( 
+		global $wpdb;
+		$wpdb->insert('wp_postmeta', array( 
 		'post_id' => $a_p, 
 		'meta_key' => $a_K,
-		'meta_value' => $get_last_comment
-	), 
+		'meta_value' => $get_last_comment), 
 	array( 
 		'%s', 
 		'%s',
-		'%s'
-	) );
-		}
-	}
-	
-		if (get_option('subscribe_reloaded_enable_advanced_subscriptions', 'yes') == 'no'){
-						global $wpdb;
-						
-						$wpdb->update( 
-	'wp_options', 
-	array( 
-		'option_value' => 'yes'
-		), 
+		'%s') ); }}
+	 if (get_option('subscribe_reloaded_enable_advanced_subscriptions', 'yes') == 'no'){
+	 global $wpdb;
+	 $wpdb->update( 'wp_options', 
+	array( 'option_value' => 'yes'), 
 	array( 'option_name' => 'subscribe_reloaded_enable_advanced_subscriptions' ), 
-	array( 
-		'%s'
-		
-	) 
-	 
-);
-						
-				}
-			
-					
+	array( '%s'));}
 			if (get_option('subscribe_reloaded_checked_by_default', '1') == 'no'){
-				
-				
-					global $wpdb;
-						
-						$wpdb->update( 
-	'wp_options', 
-	array( 
-		'option_value' => '1'
-		), 
-	array( 'option_name' => 'subscribe_reloaded_checked_by_default' ), 
-	array( 
-		'%s'
-		
-	) 
-	 
-);
-
-	global $wpdb;
-						
-						$wpdb->update( 
-	'wp_options', 
-	array( 
-		'option_value' => 'If A New Comment Is Posted:'
-		), 
-	array( 'option_name' => 'subscribe_reloaded_checkbox_label' ), 
-	array( 
-		'%s'
-		
-	) 
-	 
-);
-						
-				}
+			global $wpdb;
+			$wpdb->update('wp_options',	array('option_value' => '1'), array( 'option_name' => 'subscribe_reloaded_checked_by_default' ), array('%s'));
+            global $wpdb;
+			$wpdb->update('wp_options',	array('option_value' => 'If A New Comment Is Posted:'), array( 'option_name' => 'subscribe_reloaded_checkbox_label' ), array('%s')); }
+			if (get_option('subscribe_reloaded_checked_by_default', '1') == 'yes'){
+			global $wpdb;
+			$wpdb->update('wp_options', array('option_value' => '2'), array( 'option_name' => 'subscribe_reloaded_checked_by_default' ), array('%s'));
+	        global $wpdb;
+			$wpdb->update('wp_options',	array('option_value' => 'If A New Comment Is Posted:'), array( 'option_name' => 'subscribe_reloaded_checkbox_label' ), array('%s')); }
+			$rtff = get_option('subscribe_reloaded_checkbox_html', ' ');
+			if ($rtff != '<p><label for=\'subscribe-reloaded\'> [checkbox_label][checkbox_field]</label></p>' ||  $rtff != '<p><label for=\'subscribe-reloaded\'> [checkbox_field][checkbox_label]</label></p>' ){
+			global $wpdb;
+			$wpdb->update('wp_options', array('option_value' => '<p><label for=\'subscribe-reloaded\'> [checkbox_label][checkbox_field]</label></p>'), array( 'option_name' => 'subscribe_reloaded_checkbox_html' ), array('%s')); }}
 			
-			
-				if (get_option('subscribe_reloaded_checked_by_default', '1') == 'yes'){
-					
-					
-							global $wpdb;
-						
-						$wpdb->update( 
-	'wp_options', 
-	array( 
-		'option_value' => '2'
-		), 
-	array( 'option_name' => 'subscribe_reloaded_checked_by_default' ), 
-	array( 
-		'%s'
-		
-	) 
-	 
-);
-
-	global $wpdb;
-						
-						$wpdb->update( 
-	'wp_options', 
-	array( 
-		'option_value' => 'If A New Comment Is Posted:'
-		), 
-	array( 'option_name' => 'subscribe_reloaded_checkbox_label' ), 
-	array( 
-		'%s'
-		
-	) 
-	 
-);
-					
-						
-				}
-				
-				$rtff = get_option('subscribe_reloaded_checkbox_html', ' ');
-				
-								
-				if ($rtff != '<p><label for=\'subscribe-reloaded\'> [checkbox_label][checkbox_field]</label></p>' 
-				||  $rtff != '<p><label for=\'subscribe-reloaded\'> [checkbox_field][checkbox_label]</label></p>' ){
-				
-				
-					
-					global $wpdb;
-						
-						$wpdb->update( 
-	'wp_options', 
-	array( 
-		'option_value' => '<p><label for=\'subscribe-reloaded\'> [checkbox_label][checkbox_field]</label></p>'
-		), 
-	array( 'option_name' => 'subscribe_reloaded_checkbox_html' ), 
-	array( 
-		'%s'
-		
-	) 
-	 
-);
-						
-					
-				}
-				
-			
-}
 register_activation_hook( __FILE__, 'run_at_activation' );
 add_action( 'admin_init', 'run_at_activation');
 
@@ -178,12 +67,10 @@ add_action( 'admin_init', 'run_at_activation');
  */
 function subscribe_reloaded_show(){
 	global $post, $wp_subscribe_reloaded;
-
-	$is_disabled = get_post_meta($post->ID, 'stcr_disable_subscriptions', true);
+    $is_disabled = get_post_meta($post->ID, 'stcr_disable_subscriptions', true);
 	if (!empty($is_disabled))
-		return $_comment_ID;
-
-	$show_subscription_box = true;
+	return $_comment_ID;
+    $show_subscription_box = true;
 	$html_to_show = '';
 	$user_link = get_bloginfo('url').get_option('subscribe_reloaded_manager_page', '');
 
@@ -205,35 +92,25 @@ function subscribe_reloaded_show(){
 			html_entity_decode(stripslashes(get_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions.",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 		$show_subscription_box = false;
 	}
-
-	if ($wp_subscribe_reloaded->is_author($post->post_author)){	// when the second parameter is empty, cookie value will be used
+        if ($wp_subscribe_reloaded->is_author($post->post_author)){	// when the second parameter is empty, cookie value will be used
 		if (get_option('subscribe_reloaded_admin_subscribe', 'no') == 'no') $show_subscription_box = false;
 		$html_to_show .= str_replace('[manager_link]', $manager_link,
 			html_entity_decode(stripslashes(get_option('subscribe_reloaded_author_label', __("You can <a href='[manager_link]'>manage the subscriptions</a> of this post.",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 	}
-
-	if ($show_subscription_box){
+        if ($show_subscription_box){
 		$checkbox_label = str_replace('[subscribe_link]', "$manager_link&amp;sra=s",
-			html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_label', __("If A New Comment Is Posted:",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
+		html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_label', __("If A New Comment Is Posted:",'subscribe-reloaded'))), ENT_COMPAT, 'UTF-8'));
 		$checkbox_inline_style = get_option('subscribe_reloaded_checkbox_inline_style', 'width:30px');
 		if (!empty($checkbox_inline_style)) $checkbox_inline_style = " style='$checkbox_inline_style'";
 		$checkbox_html_wrap = html_entity_decode(stripslashes(get_option('subscribe_reloaded_checkbox_html', '')), ENT_COMPAT, 'UTF-8');
-		
-				
-							
-			$checkbox_field = "<select name='subscribe-reloaded' id='subscribe-reloaded'>
-				<option value='none'".((get_option('subscribe_reloaded_checked_by_default', '1') == '1')?" selected='selected'":'').">".get_option('subscribe_reloaded_dropdown_label', 'Do Not Send Email Notifications.')."</option>
-				<option value='yes'".((get_option('subscribe_reloaded_checked_by_default', '1') == '2')?" selected='selected'":'').">".get_option('subscribe_reloaded_dropdown_label1', 'Send Email Notification ONLY If Someone Replies To My Comment(s).')."</option>
-				<option value='replies'".((get_option('subscribe_reloaded_checked_by_default', '1') == '3')?" selected='selected'":'').">".get_option('subscribe_reloaded_dropdown_label2', 'Send Email Notification Whenever A New Comment Is Posted.')."</option>
-				
-			</select>";
+		$checkbox_field = "<select name='subscribe-reloaded' id='subscribe-reloaded'><option value='none'".((get_option('subscribe_reloaded_checked_by_default', '1') == '1')?" selected='selected'":'').">".get_option('subscribe_reloaded_dropdown_label', 'Do Not Send Email Notifications.')."</option><option value='yes'".((get_option('subscribe_reloaded_checked_by_default', '1') == '2')?" selected='selected'":'').">".get_option('subscribe_reloaded_dropdown_label1', 'Send Email Notification ONLY If Someone Replies To My Comment(s).')."</option><option value='replies'".((get_option('subscribe_reloaded_checked_by_default', '1') == '3')?" selected='selected'":'').">".get_option('subscribe_reloaded_dropdown_label2', 'Send Email Notification Whenever A New Comment Is Posted.')."</option></select>";
 		
 		if (get_option('subscribe_reloaded_show_subscription_box1', 'yes') == 'no'){
 			$checkbox_label = "";
+			} else {
+			$checkbox_label = $checkbox_label . "<br />";
 			}
-	
-		
-		if (empty($checkbox_html_wrap)){
+	    if (empty($checkbox_html_wrap)){
 			$html_to_show = "$checkbox_field <label for='subscribe-reloaded'>$checkbox_label</label>" . $html_to_show;
 		}
 		else{
@@ -247,8 +124,17 @@ function subscribe_reloaded_show(){
 
 // Show the checkbox - You can manually override this by adding the corresponding function in your template
 if (get_option('subscribe_reloaded_show_subscription_box', 'yes') == 'yes')
+{
+	if (get_option('subscribe_reloaded_sub_options', 'op1') == 'op1')
+	{
 	add_action('comment_form', 'subscribe_reloaded_show');
-
+	}
+	if (get_option('subscribe_reloaded_sub_options', 'op1') == 'op2')
+	{
+	add_action('comment_form_after_fields', 'subscribe_reloaded_show');
+    add_action('comment_form_logged_in_after', 'subscribe_reloaded_show' );
+	}
+}
 class wp_subscribe_reloaded{
 
 	/**
@@ -359,40 +245,23 @@ class wp_subscribe_reloaded{
 		// Load localization files
 		load_plugin_textdomain('subscribe-reloaded', WP_PLUGIN_DIR .'/send-email-only-on-reply-to-my-comment/langs', '/send-email-only-on-reply-to-my-comment/langs');
 
-		// Import the information collected by Subscribe to Comments & Co., if needed
-		$result = $wpdb->get_row("DESC $wpdb->comments comment_subscribe", ARRAY_A);
-		$count_postmeta_rows = $wpdb->get_var("SELECT COUNT(*) FROM $wpdb->postmeta WHERE meta_key LIKE '\_stcr@\_%'");
-		if (!empty($result) && is_array($result) && $count_postmeta_rows == 0){
-			$wpdb->query("
-				INSERT INTO $wpdb->postmeta (post_id, meta_key, meta_value)
-					SELECT comment_post_ID, CONCAT('_stcr@_', comment_author_email), CONCAT(comment_date, '|Y')
-					FROM $wpdb->comments
-					WHERE comment_author_email LIKE '%@%.%' AND comment_subscribe = 'Y'
-					GROUP BY comment_post_ID, comment_author_email");
-		}
-
 		// Starting from version 2.0 StCR uses Wordpress' tables to store the information about subscriptions
 		$this->_update_db();
 
 		// Messages related to the management page
 		global $wp_rewrite;
-
-		if (empty($wp_rewrite->permalink_structure)){
+        if (empty($wp_rewrite->permalink_structure)){
 			add_option('subscribe_reloaded_manager_page', '/?page_id=99999', '', 'no');
 		}
 		else{
 			add_option('subscribe_reloaded_manager_page', '/comment-subscriptions', '', 'no');
 		}
-
-
-
-		add_option('subscribe_reloaded_dropdown_label', __("Do Not Send Email Notifications.",'subscribe-reloaded'), '', 'no');
+        add_option('subscribe_reloaded_dropdown_label', __("Do Not Send Email Notifications.",'subscribe-reloaded'), '', 'no');
         add_option('subscribe_reloaded_dropdown_label1', __("Send Email Notification ONLY If Someone Replies To My Comment(s).",'subscribe-reloaded'), '', 'no');
         add_option('subscribe_reloaded_dropdown_label2', __("Send Email Notification Whenever A New Comment Is Posted.",'subscribe-reloaded'), '', 'no');
         add_option('subscribe_reloaded_show_subscription_box1', 'yes', '', 'no');
-
-
-
+		add_option('subscribe_reloaded_show_subscription_box', 'yes', '', 'no');
+        add_option('subscribe_reloaded_sub_options', 'op1', '', 'no');
 		add_option('subscribe_reloaded_show_subscription_box', 'yes', '', 'no');
 		add_option('subscribe_reloaded_checked_by_default', '1', '', 'no');
 		add_option('subscribe_reloaded_enable_advanced_subscriptions', 'yes', '', 'yes');
@@ -402,7 +271,6 @@ class wp_subscribe_reloaded{
 		add_option('subscribe_reloaded_subscribed_label', __("You are subscribed to this post. <a href='[manager_link]'>Manage</a> your subscriptions.",'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_subscribed_waiting_label', __("Your subscription to this article needs to be confirmed.",'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_author_label', __("You can <a href='[manager_link]'>manage the subscriptions</a> of this post.",'subscribe-reloaded'), '', 'no');
-
 		add_option('subscribe_reloaded_manager_page_enabled', 'yes', '', 'no');
 		add_option('subscribe_reloaded_manager_page_title', __('Manage subscriptions','subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_custom_header_meta', "<meta name='robots' content='noindex,nofollow'>", '', 'no');
@@ -413,7 +281,6 @@ class wp_subscribe_reloaded{
 		add_option('subscribe_reloaded_subscription_confirmed_dci', __("Thank you for using our subscription service. In order to confirm your request, please check your email for the verification message and follow the instructions.", 'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_author_text', __("To change one or more notifications, select the corresponding checkbox and then click the action that you want to perform.", 'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_user_text', __("To change one or more notifications, select the corresponding checkbox and then click the action that you want to perform. You are currently subscribed to:", 'subscribe-reloaded'), '', 'no');
-
 		add_option('subscribe_reloaded_from_name', get_bloginfo('name'), '', 'no');
 		add_option('subscribe_reloaded_from_email', get_bloginfo('admin_email'), '', 'no');
 		add_option('subscribe_reloaded_notification_subject', __('There is a new comment to [post_title]','subscribe-reloaded'), '', 'no');
@@ -422,7 +289,6 @@ class wp_subscribe_reloaded{
 		add_option('subscribe_reloaded_double_check_content', __("",'subscribe-reloaded'), '', 'no');
 		add_option('subscribe_reloaded_management_subject', __('Manage your subscriptions on [blog_name]','subscribe-reloaded'));
 		add_option('subscribe_reloaded_management_content', __("You have requested to manage your subscriptions to the articles on [blog_name]. Follow this link to access your personal page:\n[manager_link]",'subscribe-reloaded'));
-
 		add_option('subscribe_reloaded_purge_days', '30', '', 'no');
 		add_option('subscribe_reloaded_enable_double_check', 'no', '', 'no');
 		add_option('subscribe_reloaded_notify_authors', 'no', '', 'no');
@@ -512,160 +378,55 @@ class wp_subscribe_reloaded{
 				}
 			}
 		}
-		
-		
-		
-		
 		global $wpdb;
-				$check_if_send_email =	$wpdb->get_var("SELECT `meta_value` FROM `wp_postmeta` WHERE `post_id` = '1' AND `meta_key` = '_stt@_notsend_dup'");
-				
-				
-				if ($check_if_send_email == null){
-		
+		$check_if_send_email =	$wpdb->get_var("SELECT `meta_value` FROM `wp_postmeta` WHERE `post_id` = '1' AND `meta_key` = '_stt@_notsend_dup'");
+		if ($check_if_send_email == null){
 		global $wpdb;
 		$get_last_comment1 = $wpdb->get_var("SELECT `comment_ID` FROM `wp_comments` WHERE `comment_approved` = '1' ORDER BY `comment_ID` DESC");
-		
 		if ($get_last_comment1 != null){
-		
 		$a_p = "1";
 		$a_K = "_stt@_notsend_dup";
-		
-		
-					global $wpdb;
-					 $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $a_p, 
-		'meta_key' => $a_K,
-		'meta_value' => $get_last_comment1
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );
-		}
-				}
-			
-				
-				global $wpdb;
-				$check_if_send_email =	$wpdb->get_var("SELECT `meta_value` FROM `wp_postmeta` WHERE `post_id` = '1' AND `meta_key` = '_stt@_notsend_dup'");
-				
-				
-				if ($check_if_send_email != NULL && $_comment_ID > $check_if_send_email){
-				
-				
+		global $wpdb;
+		$wpdb->insert('wp_postmeta', array('post_id' => $a_p, 'meta_key' => $a_K, 'meta_value' => $get_last_comment1), array( '%s', '%s', '%s')); }	}
+		global $wpdb;
+		$check_if_send_email =	$wpdb->get_var("SELECT `meta_value` FROM `wp_postmeta` WHERE `post_id` = '1' AND `meta_key` = '_stt@_notsend_dup'");
+		if ($check_if_send_email != NULL && $_comment_ID > $check_if_send_email){
 		$cpid = $info->comment_post_ID;
 		$cpemail = $info->comment_author_email;
-		 $cpcid = $_comment_ID;
-		 
-		
-				global $wpdb;
-					
-			$emailall = $wpdb->get_col("SELECT `meta_key` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_value` LIKE '%%R'");
-
-
-if ($emailall){
-	
-		
-				
-					foreach($emailall as $childemail2244){
-						
-						$childemail22 = str_replace("_stcr@_", "", "$childemail2244");
-						
-						
-				
+		$cpcid = $_comment_ID;
+		global $wpdb;
+		$emailall = $wpdb->get_col("SELECT `meta_key` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_value` LIKE '%%R'");
+        if ($emailall){
+			        foreach($emailall as $childemail2244){
+					$childemail22 = str_replace("_stcr@_", "", "$childemail2244");
 					if ($childemail22 != $info->comment_author_email){
-						
-					
 					global $wpdb;
 					$checkalready = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_key` = '_stt@_$childemail22' AND `meta_value` = '$cpcid'");
-					
 					if (!($checkalready)){
-					
-								
 					$this->notify_user($info->comment_post_ID, $childemail22, $_comment_ID);
-					
 					$childemail22345 = "_stt@_$childemail22";
-					
 					global $wpdb;
-					 $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $cpid, 
-		'meta_key' => $childemail22345,
-		'meta_value' => $cpcid
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );
-					
-					
-					}
-					
-				}
-					
-		
-					}
-					}
-			
+					$wpdb->insert('wp_postmeta', array('post_id' => $cpid, 'meta_key' => $childemail22345, 'meta_value' => $cpcid), array( '%s', '%s', '%s') );	}}}}
 					$y_cpid = $info->comment_post_ID;
-		$y_cpemail = $info->comment_author_email;
-		 $y_cpcid = $_comment_ID;
-		 
-		
-				global $wpdb;
-					
-			$y_email = $wpdb->get_var("SELECT `comment_parent` FROM `wp_comments` WHERE `comment_ID` = '$y_cpcid'");
-				
+		            $y_cpemail = $info->comment_author_email;
+		            $y_cpcid = $_comment_ID;
+		        global $wpdb;
+    			$y_email = $wpdb->get_var("SELECT `comment_parent` FROM `wp_comments` WHERE `comment_ID` = '$y_cpcid'");
 				if ($y_email != '0'){
-				
 				global $wpdb;
 				$y_parent = $wpdb->get_row("SELECT * FROM `wp_comments` WHERE `comment_ID` = '$y_email'", ARRAY_N);
-				
-					
-					if ($y_parent != NULL){
-			
-			global $wpdb;
-			$y_parent_check = $wpdb->get_row("SELECT * FROM `wp_postmeta` WHERE `post_id` = '$y_cpid' AND `meta_key` = '_stcr@_$y_parent[3]' AND `meta_value` LIKE '%%Y'", ARRAY_N);
-				
-			
-			if ($y_parent_check != NULL){
-				
-
+				if ($y_parent != NULL){
+			    global $wpdb;
+			    $y_parent_check = $wpdb->get_row("SELECT * FROM `wp_postmeta` WHERE `post_id` = '$y_cpid' AND `meta_key` = '_stcr@_$y_parent[3]' AND `meta_value` LIKE '%%Y'", ARRAY_N);
+				if ($y_parent_check != NULL){
 				global $wpdb;
 				$checkalready_y = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `post_id` = '$y_cpid' AND `meta_key` = '_stt@_$y_parent[3]' AND `meta_value` = '$y_cpcid'");
-					
+				if (!($checkalready_y)){
+				$this->notify_user($info->comment_post_ID, $y_parent[3], $y_cpcid);
+				$y_email2245 = "_stt@_$y_parent[3]";
+	            global $wpdb;				 
+                $wpdb->insert('wp_postmeta', array( 'post_id' => $y_cpid, 'meta_key' => $y_email2245, 'meta_value' => $y_cpcid), array( '%s', '%s', '%s') );}}}}}}
 				
-					if (!($checkalready_y)){
-				
-				
-$this->notify_user($info->comment_post_ID, $y_parent[3], $y_cpcid);
-					
-					
-					$y_email2245 = "_stt@_$y_parent[3]";
-	global $wpdb;				 
- $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $y_cpid, 
-		'meta_key' => $y_email2245,
-		'meta_value' => $y_cpcid
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );					
-					
-				}
-					
-			}
-					
-					}
-								
-				}
-				
-				}
-
-	
-	}
 	// end new_comment_posted
 		
 	public function isDoubleCheckinEnabled($info) {
@@ -700,194 +461,73 @@ $this->notify_user($info->comment_post_ID, $y_parent[3], $y_cpcid);
 
 			case '1': // Approved
 				$this->update_subscription_status($info->comment_post_ID, $info->comment_author_email, '-C');
-				
-				
 				global $wpdb;
 				$check_if_send_email =	$wpdb->get_var("SELECT `meta_value` FROM `wp_postmeta` WHERE `post_id` = '1' AND `meta_key` = '_stt@_notsend_dup'");
-				
-				
 				if ($check_if_send_email == null){
-		
 		global $wpdb;
 		$get_last_comment1 = $wpdb->get_var("SELECT `comment_ID` FROM `wp_comments` WHERE `comment_approved` = '1' ORDER BY `comment_ID` DESC");
-		
 		if ($get_last_comment1 != null){
-		
 		$a_p = "1";
 		$a_K = "_stt@_notsend_dup";
-		
-					global $wpdb;
-					 $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $a_p, 
-		'meta_key' => $a_K,
-		'meta_value' => $get_last_comment1
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );
-		}
-				}
-				
+		global $wpdb;
+		$wpdb->insert('wp_postmeta', array( 'post_id' => $a_p, 'meta_key' => $a_K, 'meta_value' => $get_last_comment1), array( '%s', '%s', '%s') );}}
 				global $wpdb;
 				$check_if_send_email =	$wpdb->get_var("SELECT `meta_value` FROM `wp_postmeta` WHERE `post_id` = '1' AND `meta_key` = '_stt@_notsend_dup'");
-				
 				if ($check_if_send_email != NULL && $_comment_ID > $check_if_send_email){
-				
-				
-		$cpid = $info->comment_post_ID;
-		$cpemail = $info->comment_author_email;
-		 $cpcid = $_comment_ID;
-		 
-		
+		        $cpid = $info->comment_post_ID;
+		        $cpemail = $info->comment_author_email;
+		        $cpcid = $_comment_ID;
 				global $wpdb;
-					
-			$emailall = $wpdb->get_col("SELECT `meta_key` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_value` LIKE '%%R'");
-
-
-if ($emailall){
-	
-					
+			    $emailall = $wpdb->get_col("SELECT `meta_key` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_value` LIKE '%%R'");
+                if ($emailall){
 					foreach($emailall as $childemail2244){
 					$childemail22 = str_replace("_stcr@_", "", "$childemail2244");
-				
 					if ($childemail22 != $info->comment_author_email){
-						
-					
 					global $wpdb;
 					$checkalready = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_key` = '_stt@_$childemail22' AND `meta_value` = '$cpcid'");
-					
 					if (!($checkalready)){
-					
-								
 					$this->notify_user($info->comment_post_ID, $childemail22, $_comment_ID);
-					
 					$childemail22345 = "_stt@_$childemail22";
-					
 					global $wpdb;
-					 $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $cpid, 
-		'meta_key' => $childemail22345,
-		'meta_value' => $cpcid
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );
-					
-					}
-					
-				}
-			
-		
+					$wpdb->insert('wp_postmeta', array( 'post_id' => $cpid, 'meta_key' => $childemail22345, 'meta_value' => $cpcid), array( '%s', '%s', '%s') );}}
 			if ($childemail22 == $info->comment_author_email){
 			global $wpdb;	
-			$commentsbefore =	$wpdb->get_col("SELECT `comment_ID` FROM `wp_comments` WHERE `comment_post_ID` = '$cpid' AND `comment_ID` > '$cpcid' AND `comment_approved` = '1'");
+			$commentsbefore = $wpdb->get_col("SELECT `comment_ID` FROM `wp_comments` WHERE `comment_post_ID` = '$cpid' AND `comment_ID` > '$cpcid' AND `comment_approved` = '1'");
 			global $wpdb;
-			$comment_dup =	$wpdb->get_col("SELECT `comment_author_email` FROM `wp_comments` WHERE `comment_post_ID` = '$cpid' AND `comment_ID` > '$cpcid' AND `comment_author_email` = '$childemail22'");
-				
-				if ($commentsbefore && !($comment_dup)){
-					
-					
-					
-					foreach($commentsbefore as $greatercomment){
-						
-						
+			$comment_dup = $wpdb->get_col("SELECT `comment_author_email` FROM `wp_comments` WHERE `comment_post_ID` = '$cpid' AND `comment_ID` > '$cpcid' AND `comment_author_email` = '$childemail22'");
+			if ($commentsbefore && !($comment_dup)){
+				    foreach($commentsbefore as $greatercomment){
 					global $wpdb;
 					$checkalready_1 = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `post_id` = '$cpid' AND `meta_key` = '_stt@_$childemail22' AND `meta_value` = '$greatercomment'");
-					
-					
 					if (!($checkalready_1)){
-					
-				
 					$this->notify_user($info->comment_post_ID, $childemail22, $greatercomment);
-					
-					
 					$childemail22345 = "_stt@_$childemail22";
-	global $wpdb;				 
- $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $cpid, 
-		'meta_key' => $childemail22345,
-		'meta_value' => $greatercomment
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );					
-					}
-										
-					}
-				
-				}
-				
-				}
-			
-					}
-					}
-				
-				
-					$y_cpid = $info->comment_post_ID;
-		$y_cpemail = $info->comment_author_email;
-		 $y_cpcid = $_comment_ID;
-		 
-		
-				global $wpdb;
-					
-			$y_email = $wpdb->get_var("SELECT `comment_parent` FROM `wp_comments` WHERE `comment_ID` = '$y_cpcid'");
-				
+	                global $wpdb;				 
+                    $wpdb->insert('wp_postmeta', array( 'post_id' => $cpid, 'meta_key' => $childemail22345, 'meta_value' => $greatercomment), array( '%s', '%s', '%s') );}}}}}}
+				    $y_cpid = $info->comment_post_ID;
+		            $y_cpemail = $info->comment_author_email;
+		            $y_cpcid = $_comment_ID;
+		     	global $wpdb;
+		    	$y_email = $wpdb->get_var("SELECT `comment_parent` FROM `wp_comments` WHERE `comment_ID` = '$y_cpcid'");
 				if ($y_email != '0'){
-				
 				global $wpdb;
 				$y_parent = $wpdb->get_row("SELECT * FROM `wp_comments` WHERE `comment_ID` = '$y_email'", ARRAY_N);
-				
-				    
-					
-					if ($y_parent != NULL){
-						
-								
-
-			global $wpdb;
-			$y_parent_check = $wpdb->get_row("SELECT * FROM `wp_postmeta` WHERE `post_id` = '$y_cpid' AND `meta_key` = '_stcr@_$y_parent[3]' AND `meta_value` LIKE '%%Y'", ARRAY_N);
-				
-			
-			if ($y_parent_check != NULL){
-				
+				if ($y_parent != NULL){
+				global $wpdb;
+			    $y_parent_check = $wpdb->get_row("SELECT * FROM `wp_postmeta` WHERE `post_id` = '$y_cpid' AND `meta_key` = '_stcr@_$y_parent[3]' AND `meta_value` LIKE '%%Y'", ARRAY_N);
+				if ($y_parent_check != NULL){
 				global $wpdb;
 				$checkalready_y = $wpdb->get_col("SELECT `post_id` FROM `wp_postmeta` WHERE `post_id` = '$y_cpid' AND `meta_key` = '_stt@_$y_parent[3]' AND `meta_value` = '$y_cpcid'");
-					
-					if (!($checkalready_y)){
-				
-$this->notify_user($info->comment_post_ID, $y_parent[3], $y_cpcid);
-	$y_email2245 = "_stt@_$y_parent[3]";
-	global $wpdb;				 
-    $wpdb->insert('wp_postmeta', array( 
-		'post_id' => $y_cpid, 
-		'meta_key' => $y_email2245,
-		'meta_value' => $y_cpcid
-	), 
-	array( 
-		'%s', 
-		'%s',
-		'%s'
-	) );					
-				}
-					}
-					
-					}
-				}
-			}
-			
-		
+				if (!($checkalready_y)){
+                $this->notify_user($info->comment_post_ID, $y_parent[3], $y_cpcid);
+	            $y_email2245 = "_stt@_$y_parent[3]";
+	            global $wpdb;				 
+                $wpdb->insert('wp_postmeta', array( 'post_id' => $y_cpid, 'meta_key' => $y_email2245, 'meta_value' => $y_cpcid), array( '%s', '%s', '%s') );}}}}}
 				break;
-
 			case 'trash':
 			case 'spam':
 				$this->comment_deleted($_comment_ID);
 				break;
-
 			default:
 				break;
 		}

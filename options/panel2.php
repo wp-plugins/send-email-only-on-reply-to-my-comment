@@ -9,24 +9,14 @@ if (!function_exists('is_admin') || !is_admin()){
 if (isset($_POST['options'])){
 	$faulty_fields = '';
 	if (isset($_POST['options']['show_subscription_box']) && !subscribe_reloaded_update_option('show_subscription_box', $_POST['options']['show_subscription_box'], 'yesno')) $faulty_fields = __('Enable default checkbox','subscribe-reloaded').', ';
-	
-	if (isset($_POST['options']['show_subscription_box1']) && !subscribe_reloaded_update_option('show_subscription_box1', $_POST['options']['show_subscription_box1'], 'yesno')) $faulty_fields = __('Enable default checkbox','subscribe-reloaded').', ';
-	
-	
+	if (isset($_POST['options']['show_subscription_box1']) && !subscribe_reloaded_update_option('show_subscription_box1', $_POST['options']['show_subscription_box1'], 'yesno')) $faulty_fields = __('Enable default checkbox1','subscribe-reloaded').', ';
 	if (isset($_POST['options']['checked_by_default']) && !subscribe_reloaded_update_option('checked_by_default', $_POST['options']['checked_by_default'], '123')) $faulty_fields = __('Checked by default','subscribe-reloaded').', ';	
-	if (isset($_POST['options']['enable_advanced_subscriptions']) && !subscribe_reloaded_update_option('enable_advanced_subscriptions', $_POST['options']['enable_advanced_subscriptions'], 'yesno')) $faulty_fields = __('Advanced subscription','subscribe-reloaded').', ';	
-	if (isset($_POST['options']['checkbox_inline_style']) && !subscribe_reloaded_update_option('checkbox_inline_style', $_POST['options']['checkbox_inline_style'], 'text-no-encode')) $faulty_fields = __('Custom inline style','subscribe-reloaded').', ';
 	if (isset($_POST['options']['checkbox_html']) && !subscribe_reloaded_update_option('checkbox_html', $_POST['options']['checkbox_html'], 'text-no-encode')) $faulty_fields = __('Custom HTML','subscribe-reloaded').', ';
-
+	if (isset($_POST['options']['sub_options']) && !subscribe_reloaded_update_option('sub_options', $_POST['options']['sub_options'], 'text-no-encode')) $faulty_fields = __('Custom HTML','subscribe-reloaded').', ';
 	if (isset($_POST['options']['checkbox_label']) && !subscribe_reloaded_update_option('checkbox_label', $_POST['options']['checkbox_label'], 'text')) $faulty_fields = __('Checkbox label','subscribe-reloaded').', ';
-	
-	
 	if (isset($_POST['options']['dropdown_label']) && !subscribe_reloaded_update_option('dropdown_label', $_POST['options']['dropdown_label'], 'text')) $faulty_fields = __('dropdown label','subscribe-reloaded').', ';
 	if (isset($_POST['options']['dropdown_label1']) && !subscribe_reloaded_update_option('dropdown_label1', $_POST['options']['dropdown_label1'], 'text')) $faulty_fields = __('dropdown label1','subscribe-reloaded').', ';
 	if (isset($_POST['options']['dropdown_label2']) && !subscribe_reloaded_update_option('dropdown_label2', $_POST['options']['dropdown_label2'], 'text')) $faulty_fields = __('dropdown label2','subscribe-reloaded').', ';
-	
-	
-	
 	if (isset($_POST['options']['subscribed_label']) && !subscribe_reloaded_update_option('subscribed_label', $_POST['options']['subscribed_label'], 'text')) $faulty_fields = __('Subscribed label','subscribe-reloaded').', ';
 	if (isset($_POST['options']['subscribed_waiting_label']) && !subscribe_reloaded_update_option('subscribed_waiting_label', $_POST['options']['subscribed_waiting_label'], 'text')) $faulty_fields = __('Awaiting label','subscribe-reloaded').', ';
 	if (isset($_POST['options']['author_label']) && !subscribe_reloaded_update_option('author_label', $_POST['options']['author_label'], 'text')) $faulty_fields = __('Author label','subscribe-reloaded').', ';
@@ -54,19 +44,7 @@ if (isset($_POST['options'])){
 			<input type="radio" name="options[show_subscription_box]" value="no" <?php echo (subscribe_reloaded_get_option('show_subscription_box') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
 			<div class="description"><?php _e('Enable or Disable Plugin.','subscribe-reloaded'); ?></div></td>
 	</tr>
-    
-    
-    <tr>
-		<th scope="row"><label for="show_subscription_box1"><?php _e('Show Message With Dropdown Menu?','subscribe-reloaded') ?></label></th>
-		<td>
-			<input type="radio" name="options[show_subscription_box1]" id="show_subscription_box1" value="yes"<?php echo (subscribe_reloaded_get_option('show_subscription_box1') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
-			<input type="radio" name="options[show_subscription_box1]" value="no" <?php echo (subscribe_reloaded_get_option('show_subscription_box1') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
-			<div class="description"><?php _e('Do You Want To Show A Message With The Dropdown Menu?.','subscribe-reloaded'); ?></div></td>
-	</tr>
-    
-    
-    
-	<tr>
+    	<tr>
 		<th scope="row"><label for="checked_by_default"><?php _e('Choose The Default Label','subscribe-reloaded') ?></label></th>
 		<td>
 			<input type="radio" name="options[checked_by_default]" id="checked_by_default" value="1"<?php echo (subscribe_reloaded_get_option('checked_by_default') == '1')?' checked="checked"':''; ?>> <?php echo get_option('subscribe_reloaded_dropdown_label', 'Do Not Send Email Notifications.') ?> &nbsp; &nbsp; &nbsp;<br />
@@ -74,20 +52,28 @@ if (isset($_POST['options'])){
 			<input type="radio" name="options[checked_by_default]" value="3" <?php echo (subscribe_reloaded_get_option('checked_by_default') == '3')?'  checked="checked"':''; ?>> <?php echo get_option('subscribe_reloaded_dropdown_label2', 'Send Email Notification Whenever A New Comment Is Posted.') ?>
 			<div class="description"><?php _e('Decide Which Label Should Be Selected By Default.','subscribe-reloaded'); ?></div></td>
 	</tr>
-	<tr>
+    <tr>
+		<th scope="row"><label for="show_subscription_box1"><?php _e('Show Message With Dropdown Menu?','subscribe-reloaded') ?></label></th>
+		<td>
+			<input type="radio" name="options[show_subscription_box1]" id="show_subscription_box1" value="yes"<?php echo (subscribe_reloaded_get_option('show_subscription_box1') == 'yes')?' checked="checked"':''; ?>> <?php _e('Yes','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="options[show_subscription_box1]" value="no" <?php echo (subscribe_reloaded_get_option('show_subscription_box1') == 'no')?'  checked="checked"':''; ?>> <?php _e('No','subscribe-reloaded') ?>
+			<div class="description"><?php _e('Do You Want To Show A Message With The Dropdown Menu?.','subscribe-reloaded'); ?></div></td>
+	</tr>
+    <tr>
 		<th scope="row"><label for="checkbox_html"><?php _e('Show Message Above or Below The Dropdown Menu?','subscribe-reloaded') ?></label></th>
-        
-        
         <td>
 			<input type="radio" name="options[checkbox_html]" id="checkbox_html" value="<p><label for='subscribe-reloaded'> [checkbox_label][checkbox_field]</label></p>"<?php echo (subscribe_reloaded_get_option('checkbox_html') == "<p><label for='subscribe-reloaded'> [checkbox_label][checkbox_field]</label></p>")?' checked="checked"':''; ?>> <?php _e('Above','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
 			<input type="radio" name="options[checkbox_html]" value="<p><label for='subscribe-reloaded'> [checkbox_field][checkbox_label]</label></p>" <?php echo (subscribe_reloaded_get_option('checkbox_html') == "<p><label for='subscribe-reloaded'> [checkbox_field][checkbox_label]</label></p>")?'  checked="checked"':''; ?>> <?php _e('Below','subscribe-reloaded') ?>
 			<div class="description"><?php _e('Do You Want To Show The Message Above or Below The Dropdown Menu?.','subscribe-reloaded'); ?></div></td>
-        
-        
-        
-		
-	</tr>
-</tbody>
+        </tr>
+     <tr>
+		<th scope="row"><label for="sub_options"><?php _e('Where do you want to show the Drop-Down Menu?','subscribe-reloaded') ?></label></th>
+        <td>
+			<input type="radio" name="options[sub_options]" id="sub_options" value="op1"<?php echo (subscribe_reloaded_get_option('sub_options') == "op1")?' checked="checked"':''; ?>> <?php _e('Below Comment-Submit Button','subscribe-reloaded') ?> &nbsp; &nbsp; &nbsp;
+			<input type="radio" name="options[sub_options]" value="op2" <?php echo (subscribe_reloaded_get_option('sub_options') == "op2")?'  checked="checked"':''; ?>> <?php _e('Above Comment Text Box','subscribe-reloaded') ?>
+			<div class="description"><?php _e('Do You Want To Show The drop-down menu [subscription-options] below the Submit-Comment button or above comment Text Box?','subscribe-reloaded'); ?></div></td>
+            </tr>
+     </tbody>
 </table>
 
 <h3><?php _e('Messages for your visitors','subscribe-reloaded') ?></h3>
