@@ -3,7 +3,7 @@ Contributors: Yasir
 Tags: comment notification, email notification, original poster, subscribe, comment, comments, notification, follow up comments, reply
 Requires at least: 2.9.2
 Tested up to: 4.1
-Stable tag: 1.0.5
+Stable tag: 1.0.6
 
 Users can choose to :Receive Comment Reply Notification Only: or :Receive Notification For All New Comments: or :Not Receive Any Notifications:
 

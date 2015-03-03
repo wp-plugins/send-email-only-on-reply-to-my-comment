@@ -1,7 +1,7 @@
 <?php
 /*
 Plugin Name: Send email only on Reply to My Comment
-Version: 1.0.5
+Version: 1.0.6
 Plugin URI: http://elance360.com/wordpress-plugin/
 Description: This plugin gives your site users the option to receive email notifications Only When someone selects to reply to this person's Comment.
 Author: Yasir
@@ -119,7 +119,7 @@ function subscribe_reloaded_show(){
 		}
 	}
 	if(function_exists('qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage')) $html_to_show = qtrans_useCurrentLanguageIfNotFoundUseDefaultLanguage($html_to_show);
-	echo "<!-- BEGIN: Email notification plugin by Elance360: http://elance360.com/ -->$html_to_show<!-- END: Email notification plugin by Elance360: http://elance360.com/ -->";
+	echo "<!-- BEGIN: Email notification plugin by Elance360 -->$html_to_show<!-- END: Email notification plugin by Elance360 -->";
 }
 
 // Show the checkbox - You can manually override this by adding the corresponding function in your template
